@@ -1,21 +1,27 @@
 package com.example.papadoner.controller;
 
+import com.example.papadoner.dao.DonerDAO;
 import com.example.papadoner.model.Doner;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DonerController {
 
-    @GetMapping("/order/{name}/{weight}/{price}")
-    public Doner order(@PathVariable("name") String name,
-                            @PathVariable("weight") int weight,
-                            @PathVariable("price") double price) {
-        return new Doner(name, price, weight);
+    private DonerDAO donerDAO;
+
+    @Autowired
+    public DonerController(DonerDAO donerDAO) {
+        this.donerDAO = donerDAO;
     }
-    @PostMapping("/create")
-    public ResponseEntity<Doner> create(@RequestBody Doner doner) {
-        return new ResponseEntity<>(doner, HttpStatus.CREATED);
+
+    @GetMapping("/getDoner/{name}")
+    public Doner getDonerByName(@PathVariable("name") String name) {
+
+        return donerDAO.findByName(name);
+
     }
+
 }
