@@ -7,10 +7,8 @@ import java.util.List;
 
 @Component
 public class DonerDAO {
-    private final List<Doner> donerList;
-
-    {
-        donerList = new ArrayList<>();
+    private static final List<Doner> donerList = new ArrayList<>();
+    static {
         donerList.add(new Doner("starter", 10.9, 550));
         donerList.add(new Doner("bomber", 9.9, 400));
         donerList.add(new Doner("cream_sour", 11.9, 550));

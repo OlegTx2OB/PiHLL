@@ -19,9 +19,7 @@ public class DonerController {
 
     @GetMapping("/getDoner/{name}")
     public Doner getDonerByName(@PathVariable("name") String name) {
-
         return donerDAO.findByName(name);
-
     }
 
 }
