@@ -19,7 +19,6 @@ This project is a demonstration of using Spring Boot along with Lombok library. 
 ## Example Usage:
 - **Request**: `GET /getDoner/bomber`
 - **Response**: 
-  ```json
 {
 "name": "bomber",
 "price": 9.9,
