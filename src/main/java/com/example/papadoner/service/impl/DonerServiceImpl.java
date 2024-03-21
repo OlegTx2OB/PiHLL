@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class DonerServiceImpl implements DonerService {
 
-
     private final DonerDAO donerDAO;
 
     @Autowired
