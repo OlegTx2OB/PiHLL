@@ -16,5 +16,5 @@ public class UserDto {
     private long id;
     private String name;
     private long telephone;
-    private List<OrderDto> orderDtos;
+    private List<OrderDto> orders;
 }

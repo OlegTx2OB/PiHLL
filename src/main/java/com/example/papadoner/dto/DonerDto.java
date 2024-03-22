@@ -1,6 +1,9 @@
 package com.example.papadoner.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 import java.util.Set;
@@ -9,11 +12,10 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class DonerDto {
 
     private short id;
     private String name;
-    private List<IngredientDto> ingredientDtos;
-    private Set<PriceByWeightDto> priceByWeightDtos;
+    private List<IngredientDto> ingredients;
+    private Set<PriceByWeightDto> priceByWeights;
 }

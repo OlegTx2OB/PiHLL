@@ -1,7 +1,10 @@
 package com.example.papadoner.mapper;
 
-import org.springframework.stereotype.Component;
+import com.example.papadoner.dto.OrderDto;
+import com.example.papadoner.model.Order;
+import org.mapstruct.Mapper;
 
-@Component
-public class OrderMapper {
+@Mapper(componentModel = "spring")
+public interface OrderMapper {
+    public OrderDto toDto(Order order);
 }

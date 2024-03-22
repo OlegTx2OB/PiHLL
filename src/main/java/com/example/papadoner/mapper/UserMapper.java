@@ -1,7 +1,10 @@
 package com.example.papadoner.mapper;
 
-import org.springframework.stereotype.Component;
+import com.example.papadoner.dto.UserDto;
+import com.example.papadoner.model.User;
+import org.mapstruct.Mapper;
 
-@Component
-public class UserMapper {
+@Mapper(componentModel = "spring")
+public interface UserMapper {
+    public UserDto toDto(User user);
 }

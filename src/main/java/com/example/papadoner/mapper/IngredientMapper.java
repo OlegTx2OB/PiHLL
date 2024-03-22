@@ -1,7 +1,10 @@
 package com.example.papadoner.mapper;
 
-import org.springframework.stereotype.Component;
+import com.example.papadoner.dto.IngredientDto;
+import com.example.papadoner.model.Ingredient;
+import org.mapstruct.Mapper;
 
-@Component
-public class IngredientMapper {
+@Mapper(componentModel = "spring")
+public interface IngredientMapper {
+    public IngredientDto toDto(Ingredient ingredient);
 }

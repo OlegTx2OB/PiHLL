@@ -15,6 +15,6 @@ import java.util.List;
 public class OrderDto {
 
     private long id;
-    private List<DonerDto> donerDtos;
+    private List<DonerDto> doners;
     private Date timestamp;
 }

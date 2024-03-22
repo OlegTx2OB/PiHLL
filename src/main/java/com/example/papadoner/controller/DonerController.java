@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class DonerController {
-
-    private final DonerService donerService;
-
-    @Autowired
-    public DonerController(DonerService donerService) {
-        this.donerService = donerService;
-    }
-
-    @GetMapping("/getDoner/{name}")
-    public Doner getDonerByName(@PathVariable("name") String name) {
-        return donerService.getDonerByName(name);
-    }
-
-}
+//@RestController
+//public class DonerController {
+//
+//    private final DonerService donerService;
+//
+//    @Autowired
+//    public DonerController(DonerService donerService) {
+//        this.donerService = donerService;
+//    }
+//
+//    @GetMapping("/getDoner/{name}")
+//    public Doner getDonerByName(@PathVariable("name") String name) {
+//        return donerService.getDonerByName(name);
+//    }
+//
+//}

@@ -1,8 +1,10 @@
 package com.example.papadoner.mapper;
 
-import org.springframework.stereotype.Component;
+import com.example.papadoner.dto.PriceByWeightDto;
+import com.example.papadoner.model.PriceByWeight;
+import org.mapstruct.Mapper;
 
-@Component
-public class PriceByWeightMapper {
-
+@Mapper(componentModel = "spring")
+public interface PriceByWeightMapper {
+    public PriceByWeightDto toDto(PriceByWeight priceByWeight);
 }

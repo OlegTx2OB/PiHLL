@@ -1,6 +1,4 @@
 package com.example.papadoner.service;
 
-public interface DonerService {
-
-
+public interface PriceByWeightService {
 }
