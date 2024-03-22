@@ -19,7 +19,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne  //todo з что за mappedBy
+    @ManyToOne
     private User user;
 
     @OneToMany

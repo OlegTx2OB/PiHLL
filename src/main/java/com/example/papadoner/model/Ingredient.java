@@ -21,5 +21,5 @@ public class Ingredient {
     private String name;
 
     @ManyToMany(mappedBy = "ingredients")
-    private List<Doner> doners;//todo нужно ли это сохранять в pgdmin?
+    private List<Doner> doners;
 }
