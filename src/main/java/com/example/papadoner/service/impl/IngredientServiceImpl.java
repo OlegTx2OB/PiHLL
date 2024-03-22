@@ -3,6 +3,7 @@ package com.example.papadoner.service.impl;
 import com.example.papadoner.model.Ingredient;
 import com.example.papadoner.repository.IngredientRepository;
 import com.example.papadoner.service.IngredientService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class IngredientServiceImpl implements IngredientService {
     @Override
     public Ingredient getIngredientById(short id) {
         return ingredientRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Ingredient with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient with id " + id + " not found"));
     }
 
     @Override
@@ -38,7 +39,7 @@ public class IngredientServiceImpl implements IngredientService {
             ingredient.setDoners(ingredient.getDoners());
             return ingredientRepository.save(ingredient);
         } else {
-            throw new RuntimeException("Ingredient with id " + id + " not found");
+            throw new EntityNotFoundException("Ingredient with id " + id + " not found");
         }
     }
 

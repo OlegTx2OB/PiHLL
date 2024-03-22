@@ -3,6 +3,7 @@ package com.example.papadoner.service.impl;
 import com.example.papadoner.model.User;
 import com.example.papadoner.repository.UserRepository;
 import com.example.papadoner.service.UserService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserById(long id) {
         return userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("User with id " + id + " not found"));
     }
 
     @Override
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
             user.setOrders(updatedUser.getOrders());
             return userRepository.save(user);
         } else {
-            throw new RuntimeException("User with id " + id + " not found");
+            throw new EntityNotFoundException("User with id " + id + " not found");
         }
     }
 

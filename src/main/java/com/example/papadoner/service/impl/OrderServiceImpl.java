@@ -3,6 +3,7 @@ package com.example.papadoner.service.impl;
 import com.example.papadoner.model.Order;
 import com.example.papadoner.repository.OrderRepository;
 import com.example.papadoner.service.OrderService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order getOrderById(long id) {
         return orderRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Order with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found"));
     }
 
     @Override
@@ -40,7 +41,7 @@ public class OrderServiceImpl implements OrderService {
             order.setTimestamp(updatedOrder.getTimestamp());
             return orderRepository.save(order);
         } else {
-            throw new RuntimeException("Order with id " + id + " not found");
+            throw new EntityNotFoundException("Order with id " + id + " not found");
         }
     }
 

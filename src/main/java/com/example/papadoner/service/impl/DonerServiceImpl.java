@@ -3,6 +3,7 @@ package com.example.papadoner.service.impl;
 import com.example.papadoner.model.Doner;
 import com.example.papadoner.repository.DonerRepository;
 import com.example.papadoner.service.DonerService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,7 +28,7 @@ public class DonerServiceImpl implements DonerService {
     @Override
     public Doner getDonerById(short id) {
         return donerRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Doner with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("Doner with id " + id + " not found"));
     }
 
     @Override
@@ -40,7 +41,7 @@ public class DonerServiceImpl implements DonerService {
             doner.setPriceByWeights(updatedDoner.getPriceByWeights());
             return donerRepository.save(doner);
         } else {
-            throw new RuntimeException("Doner with id " + id + " not found");
+            throw new EntityNotFoundException("Doner with id " + id + " not found");
         }
     }
 

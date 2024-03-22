@@ -3,6 +3,7 @@ package com.example.papadoner.service.impl;
 import com.example.papadoner.model.PriceByWeight;
 import com.example.papadoner.repository.PriceByWeightRepository;
 import com.example.papadoner.service.PriceByWeightService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     @Override
     public PriceByWeight getPriceByWeightById(short id) {
         return priceByWeightRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("PriceByWeight with id " + id + " not found"));
+                .orElseThrow(() -> new EntityNotFoundException("PriceByWeight with id " + id + " not found"));
     }
 
     @Override
@@ -38,7 +39,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
             priceByWeight.setPrice(updatedPriceByWeight.getPrice());
             return priceByWeightRepository.save(priceByWeight);
         } else {
-            throw new RuntimeException("PriceByWeight with id " + id + " not found");
+            throw new EntityNotFoundException("PriceByWeight with id " + id + " not found");
         }
     }
 
