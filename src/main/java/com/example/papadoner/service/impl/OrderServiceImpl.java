@@ -1,42 +1,56 @@
 package com.example.papadoner.service.impl;
 
 import com.example.papadoner.model.Order;
+import com.example.papadoner.repository.OrderRepository;
 import com.example.papadoner.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Autowired
-    public OrderServiceImpl() {
+    private final OrderRepository orderRepository;
 
+    @Autowired
+    public OrderServiceImpl(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
     }
 
     @Override
     public Order createOrder(Order order) {
-        return null;
+        return orderRepository.save(order);
     }
 
     @Override
-    public Order getOrderById() {
-        return null;
+    public Order getOrderById(long id) {
+        return orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Order with id " + id + " not found"));
     }
 
     @Override
     public Order updateOrder(long id, Order updatedOrder) {
-        return null;
+        Optional<Order> optionalOrder = orderRepository.findById(id);
+        if (optionalOrder.isPresent()) {
+            Order order = optionalOrder.get();
+            order.setUser(updatedOrder.getUser());
+            order.setDoners(updatedOrder.getDoners());
+            order.setTimestamp(updatedOrder.getTimestamp());
+            return orderRepository.save(order);
+        } else {
+            throw new RuntimeException("Order with id " + id + " not found");
+        }
     }
 
     @Override
     public void deleteOrder(long id) {
-
+        orderRepository.deleteById(id);
     }
 
     @Override
     public List<Order> getAllOrders() {
-        return null;
+        return orderRepository.findAll();
     }
 }

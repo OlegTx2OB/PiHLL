@@ -15,6 +15,6 @@ public class PriceByWeight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private short id;
-    private short name;
+    private short weight;
     private double price;
 }

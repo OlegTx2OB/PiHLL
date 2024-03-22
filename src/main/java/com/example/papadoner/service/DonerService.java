@@ -7,7 +7,7 @@ import java.util.List;
 public interface DonerService {
 
     public Doner createDoner(Doner doner);
-    public Doner getDonerById();
+    public Doner getDonerById(short id);
     public Doner updateDoner(short id, Doner updatedDoner);
     public void deleteDoner(short id);
     public List<Doner> getAllDoners();
