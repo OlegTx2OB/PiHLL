@@ -35,8 +35,8 @@ public class IngredientServiceImpl implements IngredientService {
         Optional<Ingredient> optionalIngredient = ingredientRepository.findById(id);
         if (optionalIngredient.isPresent()) {
             Ingredient ingredient = optionalIngredient.get();
-//            ingredient.setName(updatedIngredient.getName());
-//            ingredient.setDoners(updatedIngredient.getDoners());
+            ingredient.setName(updatedIngredient.getName());
+            ingredient.setDoners(updatedIngredient.getDoners());
             return ingredientRepository.save(ingredient);
         } else {
             throw new EntityNotFoundException("Ingredient with id " + id + " not found");

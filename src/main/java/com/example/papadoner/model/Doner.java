@@ -21,16 +21,16 @@ public class Doner {
 
     private String name;
 
-//    @ManyToMany(mappedBy = "ingredients")
-//    @JoinTable(name = "doner_ingredients",
-//            joinColumns = @JoinColumn(name = "doner_id"),
-//            inverseJoinColumns = @JoinColumn(name = "ingredients_id"))
-//    private List<Ingredient> ingredients;
-//
-//
-//    @ManyToMany(mappedBy = "priceByWeights")
-//    @JoinTable(name = "doner_price_by_weights",
-//            joinColumns = @JoinColumn(name = "doner_id"),
-//            inverseJoinColumns = @JoinColumn(name = "price_by_weights_id"))
-//    private Set<PriceByWeight> priceByWeights;
+    @ManyToMany
+    @JoinTable(name = "doner_ingredients",
+            joinColumns = @JoinColumn(name = "doner_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredients_id"))
+    private List<Ingredient> ingredients;
+
+
+    @ManyToMany
+    @JoinTable(name = "doner_price_by_weights",
+            joinColumns = @JoinColumn(name = "doner_id"),
+            inverseJoinColumns = @JoinColumn(name = "price_by_weights_id"))
+    private Set<PriceByWeight> priceByWeights;
 }

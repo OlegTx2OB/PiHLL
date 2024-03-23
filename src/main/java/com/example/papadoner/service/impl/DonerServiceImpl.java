@@ -36,9 +36,9 @@ public class DonerServiceImpl implements DonerService {
         Optional<Doner> optionalDoner = donerRepository.findById(id);
         if (optionalDoner.isPresent()) {
             Doner doner = optionalDoner.get();
-//            doner.setName(updatedDoner.getName());
-//            doner.setIngredients(updatedDoner.getIngredients());
-//            doner.setPriceByWeights(updatedDoner.getPriceByWeights());
+            doner.setName(updatedDoner.getName());
+            doner.setIngredients(updatedDoner.getIngredients());
+            doner.setPriceByWeights(updatedDoner.getPriceByWeights());
             return donerRepository.save(doner);
         } else {
             throw new EntityNotFoundException("Doner with id " + id + " not found");

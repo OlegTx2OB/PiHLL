@@ -20,6 +20,6 @@ public class Ingredient {
 
     private String name;
 
-//    @ManyToMany(mappedBy = "ingredients")
-//    private List<Doner> doners;
+    @ManyToMany(mappedBy = "ingredients")
+    private List<Doner> doners;
 }

@@ -21,6 +21,6 @@ public class PriceByWeight {
     private short weight;
     private double price;
 
-//    @ManyToMany(mappedBy = "priceByWeights")
-//    private Set<Doner> doners;
+    @ManyToMany(mappedBy = "priceByWeights")
+    private Set<Doner> doners;
 }

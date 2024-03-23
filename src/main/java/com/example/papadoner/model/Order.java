@@ -21,9 +21,9 @@ public class Order {
 
     @ManyToOne
     private User user;
-//
-//    @OneToMany(mappedBy = "order")
-//    private List<Doner> doners;
+
+    @OneToMany
+    private List<Doner> doners;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
