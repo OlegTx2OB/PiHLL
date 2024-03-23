@@ -26,19 +26,19 @@ public class DonerServiceImpl implements DonerService {
     }
 
     @Override
-    public Doner getDonerById(short id) {
+    public Doner getDonerById(long id) {
         return donerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Doner with id " + id + " not found"));
     }
 
     @Override
-    public Doner updateDoner(short id, Doner updatedDoner) {
+    public Doner updateDoner(long id, Doner updatedDoner) {
         Optional<Doner> optionalDoner = donerRepository.findById(id);
         if (optionalDoner.isPresent()) {
             Doner doner = optionalDoner.get();
-            doner.setName(updatedDoner.getName());
-            doner.setIngredients(updatedDoner.getIngredients());
-            doner.setPriceByWeights(updatedDoner.getPriceByWeights());
+//            doner.setName(updatedDoner.getName());
+//            doner.setIngredients(updatedDoner.getIngredients());
+//            doner.setPriceByWeights(updatedDoner.getPriceByWeights());
             return donerRepository.save(doner);
         } else {
             throw new EntityNotFoundException("Doner with id " + id + " not found");
@@ -46,7 +46,7 @@ public class DonerServiceImpl implements DonerService {
     }
 
     @Override
-    public void deleteDoner(short id) {
+    public void deleteDoner(long id) {
         donerRepository.deleteById(id);
     }
 

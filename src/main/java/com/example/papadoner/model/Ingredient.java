@@ -11,15 +11,15 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "ingredient")
+@Table(name = "t_ingredient")
 public class Ingredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private short id;
+    private long id;
 
     private String name;
 
-    @ManyToMany(mappedBy = "ingredients")
-    private List<Doner> doners;
+//    @ManyToMany(mappedBy = "ingredients")
+//    private List<Doner> doners;
 }

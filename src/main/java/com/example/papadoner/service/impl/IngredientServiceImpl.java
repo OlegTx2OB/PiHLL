@@ -25,18 +25,18 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public Ingredient getIngredientById(short id) {
+    public Ingredient getIngredientById(long id) {
         return ingredientRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Ingredient with id " + id + " not found"));
     }
 
     @Override
-    public Ingredient updateIngredient(short id, Ingredient updatedIngredient) {
+    public Ingredient updateIngredient(long id, Ingredient updatedIngredient) {
         Optional<Ingredient> optionalIngredient = ingredientRepository.findById(id);
         if (optionalIngredient.isPresent()) {
             Ingredient ingredient = optionalIngredient.get();
-            ingredient.setName(updatedIngredient.getName());
-            ingredient.setDoners(ingredient.getDoners());
+//            ingredient.setName(updatedIngredient.getName());
+//            ingredient.setDoners(updatedIngredient.getDoners());
             return ingredientRepository.save(ingredient);
         } else {
             throw new EntityNotFoundException("Ingredient with id " + id + " not found");
@@ -44,7 +44,7 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public void deleteIngredient(short id) {
+    public void deleteIngredient(long id) {
         ingredientRepository.deleteById(id);
     }
 

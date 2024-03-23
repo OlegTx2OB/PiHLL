@@ -7,8 +7,8 @@ import java.util.List;
 public interface PriceByWeightService {
 
     public PriceByWeight createPriceByWeight(PriceByWeight priceByWeight);
-    public PriceByWeight getPriceByWeightById(short id);
-    public PriceByWeight updatePriceByWeight(short id, PriceByWeight updatedPriceByWeight);
-    public void deletePriceByWeight(short id);
+    public PriceByWeight getPriceByWeightById(long id);
+    public PriceByWeight updatePriceByWeight(long id, PriceByWeight updatedPriceByWeight);
+    public void deletePriceByWeight(long id);
     public List<PriceByWeight> getAllPriceByWeights();
 }

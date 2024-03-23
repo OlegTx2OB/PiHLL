@@ -25,13 +25,13 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     }
 
     @Override
-    public PriceByWeight getPriceByWeightById(short id) {
+    public PriceByWeight getPriceByWeightById(long id) {
         return priceByWeightRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("PriceByWeight with id " + id + " not found"));
     }
 
     @Override
-    public PriceByWeight updatePriceByWeight(short id, PriceByWeight updatedPriceByWeight) {
+    public PriceByWeight updatePriceByWeight(long id, PriceByWeight updatedPriceByWeight) {
         Optional<PriceByWeight> optionalPriceByWeight = priceByWeightRepository.findById(id);
         if (optionalPriceByWeight.isPresent()) {
             PriceByWeight priceByWeight = optionalPriceByWeight.get();
@@ -44,7 +44,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     }
 
     @Override
-    public void deletePriceByWeight(short id) {
+    public void deletePriceByWeight(long id) {
         priceByWeightRepository.deleteById(id);
     }
 

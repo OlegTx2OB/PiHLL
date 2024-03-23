@@ -36,9 +36,10 @@ public class UserServiceImpl implements UserService {
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isPresent()) {
             User user = optionalUser.get();
-            user.setName(updatedUser.getName());
+            user.setLogin(updatedUser.getLogin());
+            user.setEncryptedPassword(updatedUser.getEncryptedPassword());
             user.setTelephone(updatedUser.getTelephone());
-            user.setOrders(updatedUser.getOrders());
+//            user.setOrders(updatedUser.getOrders());
             return userRepository.save(user);
         } else {
             throw new EntityNotFoundException("User with id " + id + " not found");

@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PriceByWeightRepository extends JpaRepository<PriceByWeight, Short> {
+    public interface PriceByWeightRepository extends JpaRepository<PriceByWeight, Long> {
 }

@@ -11,16 +11,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "user")
+@Table(name = "t_user")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private String login;
+    private String encryptedPassword;
     private long telephone;
 
-    @OneToMany
+    @OneToMany(mappedBy = "user")
     private List<Order> orders;
 }

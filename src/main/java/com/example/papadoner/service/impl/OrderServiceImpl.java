@@ -36,8 +36,8 @@ public class OrderServiceImpl implements OrderService {
         Optional<Order> optionalOrder = orderRepository.findById(id);
         if (optionalOrder.isPresent()) {
             Order order = optionalOrder.get();
-            order.setUser(updatedOrder.getUser());
-            order.setDoners(updatedOrder.getDoners());
+//            order.setUser(updatedOrder.getUser());
+//            order.setDoners(updatedOrder.getDoners());
             order.setTimestamp(updatedOrder.getTimestamp());
             return orderRepository.save(order);
         } else {

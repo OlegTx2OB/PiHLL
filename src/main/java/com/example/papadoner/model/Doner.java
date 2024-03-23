@@ -12,21 +12,25 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "doner")
+@Table(name = "t_doner")
 public class Doner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private short id;
+    private long id;
 
     private String name;
 
-    @ManyToMany
-    @JoinTable(name = "doner_ingredients",
-            joinColumns = @JoinColumn(name = "doner_id"),
-            inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
-    private List<Ingredient> ingredients;
-
-    @OneToMany
-    private Set<PriceByWeight> priceByWeights;
+//    @ManyToMany(mappedBy = "ingredients")
+//    @JoinTable(name = "doner_ingredients",
+//            joinColumns = @JoinColumn(name = "doner_id"),
+//            inverseJoinColumns = @JoinColumn(name = "ingredients_id"))
+//    private List<Ingredient> ingredients;
+//
+//
+//    @ManyToMany(mappedBy = "priceByWeights")
+//    @JoinTable(name = "doner_price_by_weights",
+//            joinColumns = @JoinColumn(name = "doner_id"),
+//            inverseJoinColumns = @JoinColumn(name = "price_by_weights_id"))
+//    private Set<PriceByWeight> priceByWeights;
 }

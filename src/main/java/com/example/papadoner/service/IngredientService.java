@@ -8,8 +8,8 @@ public interface IngredientService {
 
 
     public Ingredient createIngredient(Ingredient ingredient);
-    public Ingredient getIngredientById(short id);
-    public Ingredient updateIngredient(short id, Ingredient updatedIngredient);
-    public void deleteIngredient(short id);
+    public Ingredient getIngredientById(long id);
+    public Ingredient updateIngredient(long id, Ingredient updatedIngredient);
+    public void deleteIngredient(long id);
     public List<Ingredient> getAllIngredients();
 }

@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "order")
+@Table(name = "t_order")
 public class Order {
 
     @Id
@@ -21,9 +21,9 @@ public class Order {
 
     @ManyToOne
     private User user;
-
-    @OneToMany
-    private List<Doner> doners;
+//
+//    @OneToMany(mappedBy = "order")
+//    private List<Doner> doners;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
