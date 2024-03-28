@@ -31,13 +31,15 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     }
 
     @Override
-    public PriceByWeight updatePriceByWeight(long id, PriceByWeight updatedPriceByWeight) {
-        Optional<PriceByWeight> optionalPriceByWeight = priceByWeightRepository.findById(id);
-        if (optionalPriceByWeight.isPresent()) {
-            PriceByWeight priceByWeight = optionalPriceByWeight.get();
-            priceByWeight.setWeight(updatedPriceByWeight.getWeight());
-            priceByWeight.setPrice(updatedPriceByWeight.getPrice());
-            return priceByWeightRepository.save(priceByWeight);
+    public PriceByWeight updatePriceByWeight(long id, PriceByWeight newPriceByWeight) {
+        if (newPriceByWeight == null) {
+            throw new IllegalArgumentException("fun updatePriceByWeight cannot get null argument");
+        }
+        Optional<PriceByWeight> optionalOldPriceByWeight = priceByWeightRepository.findById(id);
+        if (optionalOldPriceByWeight.isPresent()) {
+            PriceByWeight oldPriceByWeight = optionalOldPriceByWeight.get();
+            newPriceByWeight.setId(oldPriceByWeight.getId());
+            return priceByWeightRepository.save(newPriceByWeight);
         } else {
             throw new EntityNotFoundException("PriceByWeight with id " + id + " not found");
         }

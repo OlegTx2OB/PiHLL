@@ -8,7 +8,7 @@ public interface PriceByWeightService {
 
     public PriceByWeight createPriceByWeight(PriceByWeight priceByWeight);
     public PriceByWeight getPriceByWeightById(long id);
-    public PriceByWeight updatePriceByWeight(long id, PriceByWeight updatedPriceByWeight);
+    public PriceByWeight updatePriceByWeight(long id, PriceByWeight newPriceByWeight);
     public void deletePriceByWeight(long id);
     public List<PriceByWeight> getAllPriceByWeights();
 }

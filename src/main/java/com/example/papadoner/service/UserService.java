@@ -8,7 +8,8 @@ public interface UserService {
 
     public User createUser(User user);
     public User getUserById(long id);
-    public User updateUser(long id, User updatedUser);
+    public User updateUser(long id, User newUser);
     public void deleteUser(long id);
     public List<User> getAllUsers();
+    public List<User> findUsersWithMoreOrdersThan(int count);
 }

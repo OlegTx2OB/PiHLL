@@ -49,4 +49,12 @@ public class UserController {
         List<User> users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+
+    @GetMapping("/{count}")
+    public ResponseEntity<List<User>> findUsersWithMoreOrdersThan(@PathVariable("count") int count) {
+        List<User> users = userService.findUsersWithMoreOrdersThan(count);
+
+        return new ResponseEntity<>(users, HttpStatus.OK);
+    }
+
 }

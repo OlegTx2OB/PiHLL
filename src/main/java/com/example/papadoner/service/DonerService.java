@@ -8,7 +8,7 @@ public interface DonerService {
 
     public Doner createDoner(Doner doner);
     public Doner getDonerById(long id);
-    public Doner updateDoner(long id, Doner updatedDoner);
+    public Doner updateDoner(long id, Doner newDoner);
     public void deleteDoner(long id);
     public List<Doner> getAllDoners();
 }

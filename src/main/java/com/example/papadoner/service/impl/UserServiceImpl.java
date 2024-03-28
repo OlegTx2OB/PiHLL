@@ -32,15 +32,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateUser(long id, User updatedUser) {
-        Optional<User> optionalUser = userRepository.findById(id);
-        if (optionalUser.isPresent()) {
-            User user = optionalUser.get();
-            user.setLogin(updatedUser.getLogin());
-            user.setEncryptedPassword(updatedUser.getEncryptedPassword());
-            user.setTelephone(updatedUser.getTelephone());
-            user.setOrders(updatedUser.getOrders());
-            return userRepository.save(user);
+    public User updateUser(long id, User newUser) {
+        if (newUser == null) {
+            throw new IllegalArgumentException("fun updateUser cannot get null argument");
+        }
+        Optional<User> optionalOldUser = userRepository.findById(id);
+        if (optionalOldUser.isPresent()) {
+            User oldUser = optionalOldUser.get();
+            newUser.setId(oldUser.getId());
+            return userRepository.save(newUser);
         } else {
             throw new EntityNotFoundException("User with id " + id + " not found");
         }
@@ -54,5 +54,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public List<User> findUsersWithMoreOrdersThan(int count) {
+        return userRepository.findUsersWithMoreOrdersThan(count);
     }
 }

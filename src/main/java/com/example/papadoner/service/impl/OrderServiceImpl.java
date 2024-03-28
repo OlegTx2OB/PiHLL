@@ -32,14 +32,15 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Order updateOrder(long id, Order updatedOrder) {
-        Optional<Order> optionalOrder = orderRepository.findById(id);
-        if (optionalOrder.isPresent()) {
-            Order order = optionalOrder.get();
-            order.setUser(updatedOrder.getUser());
-            order.setDoners(updatedOrder.getDoners());
-            order.setTimestamp(updatedOrder.getTimestamp());
-            return orderRepository.save(order);
+    public Order updateOrder(long id, Order newOrder) {
+        if (newOrder == null) {
+            throw new IllegalArgumentException("fun updateOrder cannot get null argument");
+        }
+        Optional<Order> optionalOldOrder = orderRepository.findById(id);
+        if (optionalOldOrder.isPresent()) {
+            Order oldOrder = optionalOldOrder.get();
+            newOrder.setId(oldOrder.getId());
+            return orderRepository.save(newOrder);
         } else {
             throw new EntityNotFoundException("Order with id " + id + " not found");
         }

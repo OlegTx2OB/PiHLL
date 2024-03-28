@@ -8,7 +8,7 @@ public interface OrderService {
 
     public Order createOrder(Order order);
     public Order getOrderById(long id);
-    public Order updateOrder(long id, Order updatedOrder);
+    public Order updateOrder(long id, Order newOrder);
     public void deleteOrder(long id);
     public List<Order> getAllOrders();
 }

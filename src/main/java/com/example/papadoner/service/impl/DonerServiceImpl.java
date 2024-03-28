@@ -32,14 +32,15 @@ public class DonerServiceImpl implements DonerService {
     }
 
     @Override
-    public Doner updateDoner(long id, Doner updatedDoner) {
-        Optional<Doner> optionalDoner = donerRepository.findById(id);
-        if (optionalDoner.isPresent()) {
-            Doner doner = optionalDoner.get();
-            doner.setName(updatedDoner.getName());
-            doner.setIngredients(updatedDoner.getIngredients());
-            doner.setPriceByWeights(updatedDoner.getPriceByWeights());
-            return donerRepository.save(doner);
+    public Doner updateDoner(long id, Doner newDoner) {
+        if (newDoner == null) {
+            throw new IllegalArgumentException("fun updateDoner cannot get null argument");
+        }
+        Optional<Doner> optionalOldDoner = donerRepository.findById(id);
+        if (optionalOldDoner.isPresent()) {
+            Doner oldDoner = optionalOldDoner.get();
+            newDoner.setId(oldDoner.getId());
+            return donerRepository.save(newDoner);
         } else {
             throw new EntityNotFoundException("Doner with id " + id + " not found");
         }
