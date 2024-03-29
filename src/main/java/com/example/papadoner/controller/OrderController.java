@@ -1,12 +1,16 @@
 package com.example.papadoner.controller;
 
+import com.example.papadoner.model.Doner;
 import com.example.papadoner.model.Order;
+import com.example.papadoner.service.DonerService;
 import com.example.papadoner.service.OrderService;
+import com.example.papadoner.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -14,14 +18,30 @@ import java.util.List;
 public class OrderController {
 
     private final OrderService orderService;
+    private final UserService userService;
+    private final DonerService donerService;
 
     @Autowired
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService,
+                           UserService userService,
+                           DonerService donerService) {
         this.orderService = orderService;
+        this.donerService = donerService;
+        this.userService = userService;
     }
 
     @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody Order order) {
+    public ResponseEntity<Order> createOrder(@RequestBody Order order,
+                                             @RequestParam List<Long> donerIds,
+                                             @RequestParam Long userId) {
+        order.setUser(userService.getUserById(userId));
+
+        List<Doner> donerList = new ArrayList<>();
+        for (Long id : donerIds) {
+            donerList.add(donerService.getDonerById(id));
+        }
+        order.setDoners(donerList);
+
         Order createdOrder = orderService.createOrder(order);
         return new ResponseEntity<>(createdOrder, HttpStatus.CREATED);
     }

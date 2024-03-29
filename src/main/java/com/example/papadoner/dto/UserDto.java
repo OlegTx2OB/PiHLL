@@ -1,11 +1,14 @@
 package com.example.papadoner.dto;
 
+import com.example.papadoner.model.Order;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -14,7 +17,6 @@ import java.util.List;
 public class UserDto {
 
     private long id;
-    private String name;
     private long telephone;
-    private List<OrderDto> orders;
+    private Set<OrderDto> orders;
 }

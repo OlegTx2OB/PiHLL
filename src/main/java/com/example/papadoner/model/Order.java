@@ -19,10 +19,10 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User user;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Doner> doners;
 
     @Temporal(TemporalType.TIMESTAMP)

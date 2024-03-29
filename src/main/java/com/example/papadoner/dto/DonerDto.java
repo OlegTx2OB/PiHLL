@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -14,8 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 public class DonerDto {
 
-    private short id;
+    private long id;
     private String name;
-    private List<IngredientDto> ingredients;
-    private Set<PriceByWeightDto> priceByWeights;
+    private Set<IngredientDto> ingredients;
 }

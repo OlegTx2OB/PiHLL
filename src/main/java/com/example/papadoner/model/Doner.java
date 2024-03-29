@@ -5,8 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 import java.util.Set;
+
+/*
+ * http://localhost:8080/swagger-ui/index.html
+ */
 
 @Data
 @AllArgsConstructor
@@ -21,9 +24,6 @@ public class Doner {
 
     private String name;
 
-    @ManyToMany
-    private List<Ingredient> ingredients;
-
-    @ManyToMany
-    private Set<PriceByWeight> priceByWeights;
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<Ingredient> ingredients;
 }

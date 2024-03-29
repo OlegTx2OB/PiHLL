@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
+import java.util.Set;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +20,6 @@ public class Ingredient {
 
     private String name;
 
-    @ManyToMany(mappedBy = "ingredients")
-    private List<Doner> doners;
+    @ManyToMany(mappedBy = "ingredients", cascade = CascadeType.ALL)
+    private Set<Doner> doners;
 }

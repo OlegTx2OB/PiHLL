@@ -10,6 +10,5 @@ import java.util.List;
 @Repository
 public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
 
-    @Query("SELECT ingredient FROM Ingredient ingredient WHERE ingredient.name=?1")
     Ingredient findIngredientByName(String name);
 }
