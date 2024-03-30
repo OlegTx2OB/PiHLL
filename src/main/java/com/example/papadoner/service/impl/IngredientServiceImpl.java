@@ -2,6 +2,7 @@ package com.example.papadoner.service.impl;
 
 import com.example.papadoner.cache.EntityCache;
 import com.example.papadoner.model.Ingredient;
+import com.example.papadoner.repository.DonerRepository;
 import com.example.papadoner.repository.IngredientRepository;
 import com.example.papadoner.service.IngredientService;
 import jakarta.persistence.EntityNotFoundException;
@@ -14,12 +15,18 @@ import java.util.Optional;
 @Service
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository ingredientRepository;
+
+    private final DonerRepository donerRepository;
+
+
     private final EntityCache<String, Ingredient> cache;
 
     @Autowired
     public IngredientServiceImpl(IngredientRepository ingredientRepository,
+                                 DonerRepository donerRepository,
                                  EntityCache<String, Ingredient> cache) {
         this.ingredientRepository = ingredientRepository;
+        this.donerRepository = donerRepository;
         this.cache = cache;
     }
 

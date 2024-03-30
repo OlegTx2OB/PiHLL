@@ -19,7 +19,8 @@ public class DonerMapper {
     }
 
     public DonerDto toDto(Doner doner) {
-        return new DonerDto(doner.getId(),
+        return new DonerDto(
+                doner.getId(),
                 doner.getName(),
                 ingredientMapper.toDtos(doner.getIngredients()));
     }

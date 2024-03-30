@@ -24,6 +24,6 @@ public class Doner {
 
     private String name;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.MERGE)
     private Set<Ingredient> ingredients;
 }

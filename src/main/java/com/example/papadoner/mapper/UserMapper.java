@@ -19,7 +19,8 @@ public class UserMapper {
     }
 
     public UserDto toDto(User user) {
-        return new UserDto(user.getId(),
+        return new UserDto(
+                user.getId(),
                 user.getTelephone(),
                 orderMapper.toDtos(user.getOrders()));
     }

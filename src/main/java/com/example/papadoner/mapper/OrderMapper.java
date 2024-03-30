@@ -19,7 +19,8 @@ public class OrderMapper {
     }
 
     public OrderDto toDto(Order order) {
-        return new OrderDto(order.getId(),
+        return new OrderDto(
+                order.getId(),
                 donerMapper.toDtos(order.getDoners()),
                 order.getTimestamp());
     }

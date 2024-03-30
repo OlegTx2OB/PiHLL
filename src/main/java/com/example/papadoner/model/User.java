@@ -20,6 +20,6 @@ public class User {
 
     private long telephone;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user")
     private Set<Order> orders;
 }

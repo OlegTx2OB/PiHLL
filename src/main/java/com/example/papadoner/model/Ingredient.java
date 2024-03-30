@@ -20,6 +20,6 @@ public class Ingredient {
 
     private String name;
 
-    @ManyToMany(mappedBy = "ingredients", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "ingredients", cascade = CascadeType.MERGE)
     private Set<Doner> doners;
 }
