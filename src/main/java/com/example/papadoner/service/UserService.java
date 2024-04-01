@@ -1,15 +1,17 @@
 package com.example.papadoner.service;
 
+import com.example.papadoner.dto.UserDto;
 import com.example.papadoner.model.User;
 
 import java.util.List;
+import java.util.Set;
 
 public interface UserService {
 
-    public User createUser(User user);
-    public User getUserById(long id);
-    public User updateUser(long id, User newUser);
-    public void deleteUser(long id);
-    public List<User> getAllUsers();
-    public List<User> findUsersWithMoreOrdersThan(int count);
+    UserDto createUser(User user, Set<Long> orderIds);
+    UserDto getUserById(long id);
+    UserDto updateUser(long id, User newUser, Set<Long> orderIds);
+    void deleteUser(long id);
+    List<UserDto> getAllUsers();
+    List<UserDto> findUsersWithMoreOrdersThan(int count);
 }

@@ -1,46 +1,70 @@
 package com.example.papadoner.service.impl;
 
+import com.example.papadoner.dto.OrderDto;
+import com.example.papadoner.mapper.OrderMapper;
+import com.example.papadoner.model.Doner;
 import com.example.papadoner.model.Order;
+import com.example.papadoner.repository.DonerRepository;
 import com.example.papadoner.repository.OrderRepository;
+import com.example.papadoner.repository.UserRepository;
 import com.example.papadoner.service.OrderService;
+import jakarta.annotation.Nullable;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    private final OrderRepository orderRepository;
+    private final OrderRepository mOrderRepository;
+    private final UserRepository mUserRepository;
+    private final DonerRepository mDonerRepository;
+    private final OrderMapper mOrderMapper;
 
     @Autowired
-    public OrderServiceImpl(OrderRepository orderRepository) {
-        this.orderRepository = orderRepository;
+    public OrderServiceImpl(OrderRepository orderRepository,
+                            UserRepository userRepository,
+                            DonerRepository donerRepository,
+                            OrderMapper orderMapper) {
+        this.mOrderRepository = orderRepository;
+        this.mUserRepository = userRepository;
+        this.mDonerRepository = donerRepository;
+        this.mOrderMapper = orderMapper;
     }
 
     @Override
-    public Order createOrder(Order order) {
-        return orderRepository.save(order);
-    }
-
-    @Override
-    public Order getOrderById(long id) {
-        return orderRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found"));
-    }
-
-    @Override
-    public Order updateOrder(long id, Order newOrder) {
-        if (newOrder == null) {
-            throw new IllegalArgumentException("fun updateOrder cannot get null argument");
+    public OrderDto createOrder(Order order, @Nullable Long userId, @Nullable List<Long> donerIds) {
+        if (userId != null) {
+            order.setUser(mUserRepository.findById(userId)
+                    .orElseThrow(() -> new EntityNotFoundException("User with id " + userId + " not found")));
         }
-        Optional<Order> optionalOldOrder = orderRepository.findById(id);
+        order = setDoners(order, donerIds);
+        return mOrderMapper.toDto(mOrderRepository.save(order));
+    }
+
+    @Override
+    public OrderDto getOrderById(long id) {
+        return mOrderMapper.toDto(mOrderRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found")));
+    }
+
+    @Override
+    public OrderDto updateOrder(long id, Order newOrder, @Nullable Long userId, @Nullable List<Long> donerIds) {
+        if (userId != null) {
+            newOrder.setUser(mUserRepository.findById(userId)
+                    .orElseThrow(() -> new EntityNotFoundException("User with id " + userId + " not found")));
+        }
+        newOrder = setDoners(newOrder, donerIds);
+
+        Optional<Order> optionalOldOrder = mOrderRepository.findById(id);
         if (optionalOldOrder.isPresent()) {
             Order oldOrder = optionalOldOrder.get();
             newOrder.setId(oldOrder.getId());
-            return orderRepository.save(newOrder);
+            return mOrderMapper.toDto(mOrderRepository.save(newOrder));
         } else {
             throw new EntityNotFoundException("Order with id " + id + " not found");
         }
@@ -48,11 +72,25 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void deleteOrder(long id) {
-        orderRepository.deleteById(id);
+        mOrderRepository.deleteById(id);
     }
 
     @Override
-    public List<Order> getAllOrders() {
-        return orderRepository.findAll();
+    public List<OrderDto> getAllOrders() {
+        return mOrderMapper.toDtos(mOrderRepository.findAll());
+    }
+
+    private Order setDoners(Order order, List<Long> donerIds) {
+        if (donerIds != null) {
+            List<Doner> doners = new ArrayList<>();
+            for (long id : donerIds) {
+                doners.add(
+                        mDonerRepository.findById(id)
+                                .orElseThrow(() -> new EntityNotFoundException(
+                                        "Doner with id " + id + " not found")));
+            }
+            order.setDoners(doners);
+        }
+        return order;
     }
 }

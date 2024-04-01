@@ -11,24 +11,26 @@ import java.util.List;
 @Component
 public class UserMapper {
 
-    private final OrderMapper orderMapper;
+    private final OrderMapper mOrderMapper;
 
     @Autowired
     public UserMapper(OrderMapper orderMapper) {
-        this.orderMapper = orderMapper;
+        this.mOrderMapper = orderMapper;
     }
 
     public UserDto toDto(User user) {
         return new UserDto(
                 user.getId(),
                 user.getTelephone(),
-                orderMapper.toDtos(user.getOrders()));
+                mOrderMapper.toDtos(user.getOrders()));
     }
 
     public List<UserDto> toDtos(List<User> users) {
         List<UserDto> userDtos = new ArrayList<>();
-        for (User user : users) {
-            userDtos.add(toDto(user));
+        if (users != null) {
+            for (User user : users) {
+                userDtos.add(toDto(user));
+            }
         }
         return userDtos;
     }

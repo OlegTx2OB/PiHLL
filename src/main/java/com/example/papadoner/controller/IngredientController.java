@@ -1,5 +1,6 @@
 package com.example.papadoner.controller;
 
+import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.model.Ingredient;
 import com.example.papadoner.service.IngredientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,48 +8,50 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/ingredient")
 public class IngredientController {
 
-    private final IngredientService ingredientService;
+    private final IngredientService mIngredientService;
+
     @Autowired
     public IngredientController(IngredientService ingredientService) {
-        this.ingredientService = ingredientService;
+        this.mIngredientService = ingredientService;
     }
 
     @PostMapping
-    public ResponseEntity<Ingredient> createIngredient(@RequestBody Ingredient ingredient) {
-        Ingredient createdIngredient = ingredientService.createIngredient(ingredient);
-        return new ResponseEntity<>(createdIngredient, HttpStatus.CREATED);
+    public ResponseEntity<Void> createIngredient(@RequestBody Ingredient ingredient,
+                                                 @RequestParam (required = false) Set<String> donerNames) {
+        mIngredientService.createIngredient(ingredient, donerNames);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Ingredient> getIngredientById(@PathVariable("id") long id) {
-        Ingredient ingredient = ingredientService.getIngredientById(id);
-        return new ResponseEntity<>(ingredient, HttpStatus.OK);
+    @GetMapping("/{name}")
+    public ResponseEntity<IngredientDto> getIngredientById(@PathVariable("name") String name) {
+        IngredientDto ingredientDto = mIngredientService.getIngredientByName(name);
+        return new ResponseEntity<>(ingredientDto, HttpStatus.OK);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Ingredient> updateIngredient(
+    public ResponseEntity<IngredientDto> updateIngredient(
             @PathVariable("id") long id,
-            @RequestBody Ingredient updatedIngredient
-    ) {
-        Ingredient ingredient = ingredientService.updateIngredient(id, updatedIngredient);
-        return new ResponseEntity<>(ingredient, HttpStatus.OK);
+            @RequestBody Ingredient updatedIngredient,
+            @RequestParam (required = false) Set<String> donerNames) {
+        IngredientDto ingredientDto = mIngredientService.updateIngredient(id, updatedIngredient, donerNames);
+        return new ResponseEntity<>(ingredientDto, HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteIngredient(@PathVariable("id") long id) {
-        ingredientService.deleteIngredient(id);
+        mIngredientService.deleteIngredient(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping
-    public ResponseEntity<List<Ingredient>> getAllIngredients() {
-        List<Ingredient> ingredients = ingredientService.getAllIngredients();
-        return new ResponseEntity<>(ingredients, HttpStatus.OK);
+    public ResponseEntity<Set<IngredientDto>> getAllIngredients() {
+        Set<IngredientDto> ingredientDtos = mIngredientService.getAllIngredients();
+        return new ResponseEntity<>(ingredientDtos, HttpStatus.OK);
     }
 }

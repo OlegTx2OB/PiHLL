@@ -1,14 +1,16 @@
 package com.example.papadoner.service;
 
+import com.example.papadoner.dto.OrderDto;
 import com.example.papadoner.model.Order;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
 public interface OrderService {
 
-    public Order createOrder(Order order);
-    public Order getOrderById(long id);
-    public Order updateOrder(long id, Order newOrder);
-    public void deleteOrder(long id);
-    public List<Order> getAllOrders();
+    OrderDto createOrder(Order order, Long userId, List<Long> donerIds);
+    OrderDto getOrderById(long id);
+    OrderDto updateOrder(long id, Order newOrder, Long userId, List<Long> donerIds);
+    void deleteOrder(long id);
+    List<OrderDto> getAllOrders();
 }

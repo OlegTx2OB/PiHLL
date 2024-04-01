@@ -6,29 +6,47 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Component
 public class DonerMapper {
 
-    private final IngredientMapper ingredientMapper;
+    private final IngredientMapper mIngredientMapper;
+    private final PriceByWeightMapper mPriceByWeightMapper;
 
     @Autowired
-    public DonerMapper(IngredientMapper ingredientMapper) {
-        this.ingredientMapper = ingredientMapper;
+    public DonerMapper(IngredientMapper ingredientMapper,
+                       PriceByWeightMapper priceByWeightMapper) {
+        this.mIngredientMapper = ingredientMapper;
+        this.mPriceByWeightMapper = priceByWeightMapper;
     }
 
     public DonerDto toDto(Doner doner) {
         return new DonerDto(
                 doner.getId(),
                 doner.getName(),
-                ingredientMapper.toDtos(doner.getIngredients()));
+                mIngredientMapper.toDtos(doner.getIngredients()),
+                mPriceByWeightMapper.toDtos(doner.getPricesByWeight()));
     }
 
     public List<DonerDto> toDtos(List<Doner> doners) {
         List<DonerDto> donerDtos = new ArrayList<>();
-        for (Doner doner : doners) {
-            donerDtos.add(toDto(doner));
+        if (doners != null) {
+            for (Doner doner : doners) {
+                donerDtos.add(toDto(doner));
+            }
+        }
+        return donerDtos;
+    }
+
+    public Set<DonerDto> toDtos(Set<Doner> doners) {
+        Set<DonerDto> donerDtos = new HashSet<>();
+        if (doners != null) {
+            for (Doner doner : doners) {
+                donerDtos.add(toDto(doner));
+            }
         }
         return donerDtos;
     }

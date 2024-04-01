@@ -18,5 +18,5 @@ public class UserDto {
 
     private long id;
     private long telephone;
-    private Set<OrderDto> orders;
+    private Set<OrderDto> orderDtos;
 }

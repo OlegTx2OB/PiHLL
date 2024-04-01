@@ -1,17 +1,19 @@
 package com.example.papadoner.service;
 
+import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.model.Ingredient;
 
-import java.util.List;
+import java.util.Set;
 
 public interface IngredientService {
 
+    IngredientDto createIngredient(Ingredient ingredient, Set<String> donerNames);
 
-    public Ingredient createIngredient(Ingredient ingredient);
-    public Ingredient getIngredientById(long id);
-    public Ingredient updateIngredient(long id, Ingredient newIngredient);
-    public void deleteIngredient(long id);
-    public List<Ingredient> getAllIngredients();
-    public Ingredient findIngredientByName(String name);
+    IngredientDto getIngredientByName(String name);
 
+    IngredientDto updateIngredient(long id, Ingredient newIngredient, Set<String> donerNames);
+
+    void deleteIngredient(long id);
+
+    Set<IngredientDto> getAllIngredients();
 }

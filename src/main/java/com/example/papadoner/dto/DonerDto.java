@@ -15,5 +15,6 @@ public class DonerDto {
 
     private long id;
     private String name;
-    private Set<IngredientDto> ingredients;
+    private Set<IngredientDto> ingredientDtos;
+    private Set<PriceByWeightDto> priceByWeightDtos;
 }

@@ -15,8 +15,10 @@ public class IngredientMapper {
 
     public Set<IngredientDto> toDtos(Set<Ingredient> ingredients) {
         Set<IngredientDto> ingredientDtos = new HashSet<>();
-        for (Ingredient ingredient : ingredients) {
-            ingredientDtos.add(toDto(ingredient));
+        if (ingredients != null) {
+            for (Ingredient ingredient : ingredients) {
+                ingredientDtos.add(toDto(ingredient));
+            }
         }
         return ingredientDtos;
     }

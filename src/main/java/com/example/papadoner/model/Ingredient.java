@@ -1,5 +1,6 @@
 package com.example.papadoner.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,15 +12,17 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "t_ingredient")
+@Table(name = "t_ingredients")
 public class Ingredient {
 
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String name;
 
-    @ManyToMany(mappedBy = "ingredients", cascade = CascadeType.MERGE)
+    @JsonIgnore
+    @ManyToMany(mappedBy = "ingredients", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     private Set<Doner> doners;
 }

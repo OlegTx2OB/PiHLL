@@ -1,14 +1,20 @@
 package com.example.papadoner.service;
 
+import com.example.papadoner.dto.DonerDto;
 import com.example.papadoner.model.Doner;
 
 import java.util.List;
+import java.util.Set;
 
 public interface DonerService {
 
-    public Doner createDoner(Doner doner);
-    public Doner getDonerById(long id);
-    public Doner updateDoner(long id, Doner newDoner);
-    public void deleteDoner(long id);
-    public List<Doner> getAllDoners();
+    DonerDto createDoner(Doner doner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
+
+    Set<DonerDto> getDonersByName(String name);
+
+    DonerDto updateDoner(long id, Doner newDoner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
+
+    void deleteDoner(long id);
+
+    List<DonerDto> getAllDoners();
 }
