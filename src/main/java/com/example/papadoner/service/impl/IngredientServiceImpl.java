@@ -1,6 +1,5 @@
 package com.example.papadoner.service.impl;
 
-import com.example.papadoner.cache.EntityCache;
 import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.mapper.IngredientMapper;
 import com.example.papadoner.model.Doner;
@@ -13,104 +12,91 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository mIngredientRepository;
     private final DonerRepository mDonerRepository;
     private final IngredientMapper mIngredientMapper;
-    private final EntityCache<String, IngredientDto> mCache;
-
-    boolean isCacheInitialized = false;
 
     @Autowired
     public IngredientServiceImpl(IngredientRepository ingredientRepository,
                                  DonerRepository donerRepository,
-                                 IngredientMapper ingredientMapper,
-                                 EntityCache<String, IngredientDto> cache) {
+                                 IngredientMapper ingredientMapper) {
         this.mIngredientRepository = ingredientRepository;
         this.mDonerRepository = donerRepository;
         this.mIngredientMapper = ingredientMapper;
-        this.mCache = cache;
     }
 
     @Override
     public IngredientDto createIngredient(Ingredient ingredient, @Nullable Set<String> donerNames) {
-        if (!isCacheInitialized) {
-            fillCache();
+        List<Doner> doners = getDoners(donerNames);
+        ingredient.getDoners().addAll(doners);
+        IngredientDto ingredientDto = mIngredientMapper.toDto(mIngredientRepository.save(ingredient));
+        saveIngredientInDoners(ingredient, doners);
+        return ingredientDto;
+    }
+
+    private void saveIngredientInDoners(Ingredient ingredient, List<Doner> doners) {
+        for (Doner doner : doners) {
+            doner.getIngredients().add(ingredient);
+            mDonerRepository.save(doner);
         }
-        ingredient = setDoners(ingredient, donerNames);
-        mCache.put(ingredient.getName(), mIngredientMapper.toDto(ingredient));
-        return mIngredientMapper.toDto(mIngredientRepository.save(ingredient));
     }
 
     @Override
     public IngredientDto getIngredientByName(String name) {
-        IngredientDto ingredientDto = mCache.get(name);
-        if (ingredientDto != null) {
-            return ingredientDto;
-        } else {
-            Optional<Ingredient> ingredient = mIngredientRepository.findByName(name);
-            return mIngredientMapper.toDto(ingredient
-                    .orElseThrow(() -> new EntityNotFoundException("Ingredient with name " + name + " not found")));
-        }
+        Optional<Ingredient> ingredient = mIngredientRepository.findByName(name);
+        return mIngredientMapper.toDto(ingredient
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient with name " + name + " not found")));
     }
 
     @Override
     public IngredientDto updateIngredient(long id, Ingredient newIngredient, @Nullable Set<String> donerNames) {
-        newIngredient = setDoners(newIngredient, donerNames);
+        List<Doner> doners = getDoners(donerNames);
 
-        Optional<Ingredient> optionalOldIngredient = mIngredientRepository.findById(id);
-        if (optionalOldIngredient.isPresent()) {
-            Ingredient oldIngredient = optionalOldIngredient.get();
-            newIngredient.setId(oldIngredient.getId());
+        Ingredient oldIngredient = mIngredientRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient with id " + id + " not found"));
+        newIngredient.setId(oldIngredient.getId());
 
-            mCache.remove(oldIngredient.getName());
-            mCache.put(newIngredient.getName(), mIngredientMapper.toDto(newIngredient));
-            return mIngredientMapper.toDto(mIngredientRepository.save(newIngredient));
-        } else {
-            throw new EntityNotFoundException("Ingredient with id " + id + " not found");
-        }
+        newIngredient.getDoners().addAll(doners);
+        IngredientDto ingredientDto = mIngredientMapper.toDto(mIngredientRepository.save(newIngredient));
+        saveIngredientInDoners(newIngredient, doners);
+        return ingredientDto;
     }
 
     @Override
     public void deleteIngredient(long id) {
-        if (!isCacheInitialized) {
-            fillCache();
+        Ingredient ingredient = mIngredientRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Ingredient with id " + id + " not found"));
+        List<Doner> doners = ingredient.getDoners();
+
+        for (Doner doner : doners) {
+            doner.getIngredients().remove(ingredient);
+            mDonerRepository.save(doner);
         }
-        Optional<Ingredient> ingredient = mIngredientRepository.findById(id);
-        ingredient.ifPresent(value -> mCache.remove(value.getName()));
         mIngredientRepository.deleteById(id);
     }
 
     @Override
-    public Set<IngredientDto> getAllIngredients() {
-        if (!isCacheInitialized) {
-            fillCache();
-        }
-        return new HashSet<>(mCache.getAll());
+    public List<IngredientDto> getAllIngredients() {
+        return mIngredientMapper.toDtos(mIngredientRepository.findAll());
     }
 
-    private Ingredient setDoners(Ingredient ingredient, Set<String> donerNames) {
+    private List<Doner> getDoners(Set<String> donerNames) {
         if (donerNames != null) {
-            Set<Doner> doners = new HashSet<>();
+            List<Doner> doners = new ArrayList<>();
             for (String name : donerNames) {
-                doners.addAll(
-                        mDonerRepository.findDonersByName(name)
-                                .orElseThrow(() -> new EntityNotFoundException(
-                                        "Doner with name " + name + " not found")));
+                doners.addAll(mDonerRepository.findDonersByName(name)
+                        .orElseThrow(() -> new EntityNotFoundException(
+                                "Doner with name " + name + " not found")));
             }
-            ingredient.setDoners(doners);
+            return doners;
         }
-        return ingredient;
-    }
-
-    private void fillCache() {
-        List<Ingredient> ingredients = mIngredientRepository.findAll();
-        for (Ingredient ingredient : ingredients) {
-            mCache.put(ingredient.getName(), mIngredientMapper.toDto(ingredient));
-        }
-        isCacheInitialized = true;
+        return new ArrayList<>();
     }
 }

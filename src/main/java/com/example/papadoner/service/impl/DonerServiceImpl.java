@@ -14,9 +14,8 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -43,13 +42,21 @@ public class DonerServiceImpl implements DonerService {
     public DonerDto createDoner(Doner doner,
                                 @Nullable Set<String> ingredientNames,
                                 @Nullable Set<Long> priceByWeightIds) {
-        doner = setIngredients(doner, ingredientNames);
-        doner = setPriceByWeights(doner, priceByWeightIds);
-        return mDonerMapper.toDto(mDonerRepository.save(doner));
+        //manually creating two-way link because of @ManyToMany
+
+        List<Ingredient> ingredients = getIngredients(ingredientNames);
+        List<PriceByWeight> priceByWeights = getPriceByWeights(priceByWeightIds);
+        doner.getIngredients().addAll(ingredients);
+        doner.getPricesByWeight().addAll(priceByWeights);
+        DonerDto donerDto = mDonerMapper.toDto(mDonerRepository.save(doner));
+
+        saveDonerInIngredients(doner, ingredients);
+
+        return donerDto;
     }
 
     @Override
-    public Set<DonerDto> getDonersByName(String name) {
+    public List<DonerDto> getDonersByName(String name) {
         return mDonerMapper.toDtos(mDonerRepository
                 .findDonersByName(name)
                 .orElseThrow(() -> new EntityNotFoundException("Doner with name " + name + " not found")));
@@ -59,21 +66,35 @@ public class DonerServiceImpl implements DonerService {
     public DonerDto updateDoner(long id, Doner newDoner,
                                 @Nullable Set<String> ingredientNames,
                                 @Nullable Set<Long> priceByWeightIds) {
-        newDoner = setIngredients(newDoner, ingredientNames);
-        newDoner = setPriceByWeights(newDoner, priceByWeightIds);
+        //manually creating two-way link
 
-        Optional<Doner> optionalOldDoner = mDonerRepository.findById(id);
-        if (optionalOldDoner.isPresent()) {
-            Doner oldDoner = optionalOldDoner.get();
-            newDoner.setId(oldDoner.getId());
-            return mDonerMapper.toDto(mDonerRepository.save(newDoner));
-        } else {
-            throw new EntityNotFoundException("Doner with id " + id + " not found");
-        }
+        List<Ingredient> ingredients = getIngredients(ingredientNames);
+        List<PriceByWeight> priceByWeights = getPriceByWeights(priceByWeightIds);
+
+        Doner oldDoner = mDonerRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Doner with id " + id + " not found"));
+        newDoner.setId(oldDoner.getId());
+
+        newDoner.getIngredients().addAll(ingredients);
+        newDoner.getPricesByWeight().addAll(priceByWeights);
+        DonerDto donerDto = mDonerMapper.toDto(mDonerRepository.save(newDoner));
+        saveDonerInIngredients(newDoner, ingredients);
+
+        return donerDto;
     }
 
     @Override
     public void deleteDoner(long id) {
+        //deleting two-way link
+
+        Doner doner = mDonerRepository.findById(id).orElseThrow(() -> new EntityNotFoundException(
+                "Doner with id " + id + " not found"));
+        List<Ingredient> ingredients = doner.getIngredients();
+
+        for (Ingredient ingredient : ingredients) {
+            ingredient.getDoners().remove(doner);
+            mIngredientRepository.save(ingredient);
+        }
         mDonerRepository.deleteById(id);
     }
 
@@ -82,31 +103,38 @@ public class DonerServiceImpl implements DonerService {
         return mDonerMapper.toDtos(mDonerRepository.findAll());
     }
 
-    private Doner setIngredients(Doner doner, Set<String> ingredientNames) {
+    private List<Ingredient> getIngredients(Set<String> ingredientNames) {
         if (ingredientNames != null) {
-            Set<Ingredient> ingredients = new HashSet<>();
+            List<Ingredient> ingredients = new ArrayList<>();
             for (String name : ingredientNames) {
-                ingredients.add(
-                        mIngredientRepository.findByName(name)
-                                .orElseThrow(() -> new EntityNotFoundException(
-                                        "Ingredient with name " + name + " not found")));
+                Ingredient ingredient = mIngredientRepository.findByName(name)
+                        .orElseThrow(() -> new EntityNotFoundException(
+                                "Ingredient with name " + name + " not found"));
+                ingredients.add(ingredient);
             }
-            doner.setIngredients(ingredients);
+            return ingredients;
         }
-        return doner;
+        return new ArrayList<>();
     }
 
-    private Doner setPriceByWeights(Doner doner, Set<Long> priceByWeightIds) {
+    private List<PriceByWeight> getPriceByWeights(Set<Long> priceByWeightIds) {
         if (priceByWeightIds != null) {
-            Set<PriceByWeight> priceByWeights = new HashSet<>();
+            List<PriceByWeight> priceByWeights = new ArrayList<>();
             for (long id : priceByWeightIds) {
                 priceByWeights.add(
                         mPriceByWeightRepository.findById(id)
                                 .orElseThrow(() -> new EntityNotFoundException(
                                         "priceByWeight with name " + id + " not found")));
             }
-            doner.setPricesByWeight(priceByWeights);
+            return priceByWeights;
         }
-        return doner;
+        return new ArrayList<>();
+    }
+
+    private void saveDonerInIngredients(Doner doner, List<Ingredient> ingredients) {
+        for (Ingredient ingredient : ingredients) {
+            ingredient.getDoners().add(doner);
+            mIngredientRepository.save(ingredient);
+        }
     }
 }

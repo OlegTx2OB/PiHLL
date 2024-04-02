@@ -3,6 +3,7 @@ package com.example.papadoner.service;
 import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.model.Ingredient;
 
+import java.util.List;
 import java.util.Set;
 
 public interface IngredientService {
@@ -15,5 +16,5 @@ public interface IngredientService {
 
     void deleteIngredient(long id);
 
-    Set<IngredientDto> getAllIngredients();
+    List<IngredientDto> getAllIngredients();
 }

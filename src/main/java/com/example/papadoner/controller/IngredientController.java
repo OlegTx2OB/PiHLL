@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -50,8 +51,8 @@ public class IngredientController {
     }
 
     @GetMapping
-    public ResponseEntity<Set<IngredientDto>> getAllIngredients() {
-        Set<IngredientDto> ingredientDtos = mIngredientService.getAllIngredients();
+    public ResponseEntity<List<IngredientDto>> getAllIngredients() {
+        List<IngredientDto> ingredientDtos = mIngredientService.getAllIngredients();
         return new ResponseEntity<>(ingredientDtos, HttpStatus.OK);
     }
 }

@@ -14,12 +14,12 @@ public class EntityCache<K, V> {
         mCacheMap.put(key, value);
     }
 
-    public V get(K key) {
-        return mCacheMap.get(key);
+    public Optional<V> get(K key) {
+        return Optional.of(mCacheMap.get(key));
     }
 
-    public Set<V> getAll() {
-        return new HashSet<>(mCacheMap.values());
+    public List<V> getAll() {
+        return new ArrayList<>(mCacheMap.values());
     }
 
     public void remove(K key) {

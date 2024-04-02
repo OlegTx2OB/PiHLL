@@ -4,8 +4,8 @@ import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.model.Ingredient;
 import org.springframework.stereotype.Component;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class IngredientMapper {
@@ -13,8 +13,8 @@ public class IngredientMapper {
         return new IngredientDto(ingredient.getId(), ingredient.getName());
     }
 
-    public Set<IngredientDto> toDtos(Set<Ingredient> ingredients) {
-        Set<IngredientDto> ingredientDtos = new HashSet<>();
+    public List<IngredientDto> toDtos(List<Ingredient> ingredients) {
+        List<IngredientDto> ingredientDtos = new ArrayList<>();
         if (ingredients != null) {
             for (Ingredient ingredient : ingredients) {
                 ingredientDtos.add(toDto(ingredient));

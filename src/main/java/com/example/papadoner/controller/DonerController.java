@@ -30,8 +30,8 @@ public class DonerController {
     }
 
     @GetMapping("/{name}")
-    public ResponseEntity<Set<DonerDto>> getDonersByName(@PathVariable("name") String name) {
-        Set<DonerDto> donerDtos = mDonerService.getDonersByName(name);
+    public ResponseEntity<List<DonerDto>> getDonersByName(@PathVariable("name") String name) {
+        List<DonerDto> donerDtos = mDonerService.getDonersByName(name);
         return new ResponseEntity<>(donerDtos, HttpStatus.OK);
     }
 

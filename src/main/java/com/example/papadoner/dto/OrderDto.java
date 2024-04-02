@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -15,6 +16,6 @@ import java.util.List;
 public class OrderDto {
 
     private long id;
-    private List<DonerDto> donerDtos;
+    private List<DonerDto> donerDtos = new ArrayList<>();
     private Date timestamp;
 }

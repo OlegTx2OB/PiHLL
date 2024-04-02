@@ -6,7 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,13 +24,13 @@ public class Doner {
     private String name;
 
     @JsonIgnore
-    @ManyToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @ManyToMany
     @JoinTable(name = "t_doners_ingredients",
-            joinColumns = { @JoinColumn(name = "doner_id") },
-            inverseJoinColumns = { @JoinColumn(name = "ingredient_id") })
-    private Set<Ingredient> ingredients;
+            joinColumns = {@JoinColumn(name = "doner_id")},
+            inverseJoinColumns = {@JoinColumn(name = "ingredient_id")})
+    private List<Ingredient> ingredients = new ArrayList<>();
 
     @JsonIgnore
-    @OneToMany(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    private Set<PriceByWeight> pricesByWeight;
+    @OneToMany
+    private List<PriceByWeight> pricesByWeight = new ArrayList<>();
 }

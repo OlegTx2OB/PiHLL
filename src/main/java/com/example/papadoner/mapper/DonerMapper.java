@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Component
 public class DonerMapper {
@@ -33,16 +31,6 @@ public class DonerMapper {
 
     public List<DonerDto> toDtos(List<Doner> doners) {
         List<DonerDto> donerDtos = new ArrayList<>();
-        if (doners != null) {
-            for (Doner doner : doners) {
-                donerDtos.add(toDto(doner));
-            }
-        }
-        return donerDtos;
-    }
-
-    public Set<DonerDto> toDtos(Set<Doner> doners) {
-        Set<DonerDto> donerDtos = new HashSet<>();
         if (doners != null) {
             for (Doner doner : doners) {
                 donerDtos.add(toDto(doner));

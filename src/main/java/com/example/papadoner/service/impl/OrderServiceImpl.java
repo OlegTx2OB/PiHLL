@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -60,14 +59,10 @@ public class OrderServiceImpl implements OrderService {
         }
         newOrder = setDoners(newOrder, donerIds);
 
-        Optional<Order> optionalOldOrder = mOrderRepository.findById(id);
-        if (optionalOldOrder.isPresent()) {
-            Order oldOrder = optionalOldOrder.get();
-            newOrder.setId(oldOrder.getId());
-            return mOrderMapper.toDto(mOrderRepository.save(newOrder));
-        } else {
-            throw new EntityNotFoundException("Order with id " + id + " not found");
-        }
+        Order oldOrder = mOrderRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found"));
+        newOrder.setId(oldOrder.getId());
+        return mOrderMapper.toDto(mOrderRepository.save(newOrder));
     }
 
     @Override

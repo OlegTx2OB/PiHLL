@@ -10,7 +10,7 @@ public interface DonerService {
 
     DonerDto createDoner(Doner doner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
 
-    Set<DonerDto> getDonersByName(String name);
+    List<DonerDto> getDonersByName(String name);
 
     DonerDto updateDoner(long id, Doner newDoner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
 

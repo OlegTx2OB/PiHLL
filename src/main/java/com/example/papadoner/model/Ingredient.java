@@ -6,7 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,9 +21,10 @@ public class Ingredient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(unique = true)
     private String name;
 
     @JsonIgnore
-    @ManyToMany(mappedBy = "ingredients", cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    private Set<Doner> doners;
+    @ManyToMany(mappedBy = "ingredients")
+    private List<Doner> doners = new ArrayList<>();
 }

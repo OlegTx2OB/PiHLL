@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Component
 public class OrderMapper {
@@ -25,16 +23,6 @@ public class OrderMapper {
                 order.getId(),
                 mDonerMapper.toDtos(order.getDoners()),
                 order.getTimestamp());
-    }
-
-    public Set<OrderDto> toDtos(Set<Order> orders) {
-        Set<OrderDto> orderDtos = new HashSet<>();
-        if (orders != null) {
-            for (Order order : orders) {
-                orderDtos.add(toDto(order));
-            }
-        }
-        return orderDtos;
     }
 
     public List<OrderDto> toDtos(List<Order> orders) {

@@ -12,7 +12,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -75,13 +75,13 @@ public class UserServiceImpl implements UserService {
     }
 
     private User setOrders(User user, Set<Long> orderIds) {
-        if(orderIds != null) {
-            Set<Order> orders = new HashSet<>();
+        if (orderIds != null) {
+            List<Order> orders = new ArrayList<>();
             for (long id : orderIds) {
                 orders.add(
                         mOrderRepository.findById(id).
                                 orElseThrow(() -> new EntityNotFoundException(
-                                "Order with id " + id + " not found")));
+                                        "Order with id " + id + " not found")));
             }
             user.setOrders(orders);
         }
