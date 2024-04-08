@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +22,12 @@ public class Doner {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NonNull
     private String name;
 
     @JsonIgnore
     @ManyToMany
-    @JoinTable(name = "t_doners_ingredients",
-            joinColumns = {@JoinColumn(name = "doner_id")},
-            inverseJoinColumns = {@JoinColumn(name = "ingredient_id")})
+    @JoinTable(name = "t_doners_ingredients", joinColumns = {@JoinColumn(name = "doner_id")}, inverseJoinColumns = {@JoinColumn(name = "ingredient_id")})
     private List<Ingredient> ingredients = new ArrayList<>();
 
     @JsonIgnore

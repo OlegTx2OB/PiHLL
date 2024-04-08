@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    @Query("SELECT user FROM User user JOIN user.orders orders WHERE orders IS NOT NULL AND SIZE(orders) > ?1")
+    @Query(value = "SELECT user FROM User user JOIN user.orders orders WHERE orders IS NOT NULL AND SIZE(orders) > ?1")
     List<User> findUsersWithMoreOrdersThan(int count);
 
 }

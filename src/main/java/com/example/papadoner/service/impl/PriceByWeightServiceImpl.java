@@ -2,16 +2,19 @@ package com.example.papadoner.service.impl;
 
 import com.example.papadoner.cache.EntityCache;
 import com.example.papadoner.dto.PriceByWeightDto;
+import com.example.papadoner.exception.InvalidEnteredDataException;
 import com.example.papadoner.mapper.PriceByWeightMapper;
 import com.example.papadoner.model.PriceByWeight;
 import com.example.papadoner.repository.PriceByWeightRepository;
 import com.example.papadoner.service.PriceByWeightService;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Log4j2
 @Service
 public class PriceByWeightServiceImpl implements PriceByWeightService {
 
@@ -73,7 +76,18 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     @Override
     public List<PriceByWeightDto> getAllPriceByWeights() {
         initializeCacheIfClear();
-        return mCache.getAll();
+        //return mCache.getAll();
+        return mPriceByWeightMapper.toDtos(mPriceByWeightRepository.findAll());
+    }
+    @Override
+    public void createPriceByWeightBulk(List<PriceByWeight> priceByWeights) {
+        if (priceByWeights == null) {
+            throw new InvalidEnteredDataException("PriceByWeightServiceImpl class get clear list");
+        }
+        priceByWeights.stream()
+                .map(mPriceByWeightRepository::save)
+                .forEach(pbw -> log.info("priceByWeight with id"
+                        + pbw.getId() + "was saved"));
     }
 
     private void fillCache() {

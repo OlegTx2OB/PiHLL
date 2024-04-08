@@ -16,4 +16,6 @@ public interface PriceByWeightService {
     void deletePriceByWeight(long id);
 
     List<PriceByWeightDto> getAllPriceByWeights();
+
+    void createPriceByWeightBulk(List<PriceByWeight> priceByWeights);
 }

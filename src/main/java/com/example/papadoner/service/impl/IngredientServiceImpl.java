@@ -9,6 +9,7 @@ import com.example.papadoner.repository.IngredientRepository;
 import com.example.papadoner.service.IngredientService;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+@Log4j2
 @Service
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository mIngredientRepository;
@@ -91,9 +93,7 @@ public class IngredientServiceImpl implements IngredientService {
         if (donerNames != null) {
             List<Doner> doners = new ArrayList<>();
             for (String name : donerNames) {
-                doners.addAll(mDonerRepository.findDonersByName(name)
-                        .orElseThrow(() -> new EntityNotFoundException(
-                                "Doner with name " + name + " not found")));
+                doners.addAll(mDonerRepository.findDonersByName(name));
             }
             return doners;
         }

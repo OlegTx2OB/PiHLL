@@ -11,6 +11,7 @@ import com.example.papadoner.repository.PriceByWeightRepository;
 import com.example.papadoner.service.DonerService;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+@Log4j2
 @Service
 public class DonerServiceImpl implements DonerService {
 
@@ -57,9 +59,11 @@ public class DonerServiceImpl implements DonerService {
 
     @Override
     public List<DonerDto> getDonersByName(String name) {
-        return mDonerMapper.toDtos(mDonerRepository
-                .findDonersByName(name)
-                .orElseThrow(() -> new EntityNotFoundException("Doner with name " + name + " not found")));
+        List<Doner> doners = mDonerRepository.findDonersByName(name);
+        if (doners.size() == 0) {
+            throw new EntityNotFoundException("Doner with name " + name + " not found");
+        }
+        return mDonerMapper.toDtos(doners);
     }
 
     @Override
