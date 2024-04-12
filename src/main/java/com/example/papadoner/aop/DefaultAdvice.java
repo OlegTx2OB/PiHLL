@@ -1,4 +1,4 @@
-package com.example.papadoner.advice;
+package com.example.papadoner.aop;
 
 import com.example.papadoner.exception.InvalidEnteredDataException;
 import com.example.papadoner.exception.ResourceNotFoundException;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.extern.log4j.Log4j2;
+import org.aspectj.lang.annotation.Aspect;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -24,7 +24,7 @@ import org.springframework.web.servlet.NoHandlerFoundException;
 import java.time.format.DateTimeParseException;
 
 @ControllerAdvice
-@Log4j2
+@Aspect
 public final class DefaultAdvice {
     @Data
     @AllArgsConstructor
@@ -44,13 +44,11 @@ public final class DefaultAdvice {
             IllegalArgumentException.class,
             InvalidEnteredDataException.class})
     public ResponseEntity<ExceptionMessage> handleBadRequestErrorException(Exception exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.BAD_REQUEST.value(), exception.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({DataIntegrityViolationException.class})
     public ResponseEntity<ExceptionMessage> handleInternalServerErrorException(Exception exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.INTERNAL_SERVER_ERROR.value(),
                 "do not enter not unique value in unique field. more: " + exception.getMessage()),
                 HttpStatus.INTERNAL_SERVER_ERROR);
@@ -58,31 +56,26 @@ public final class DefaultAdvice {
 
     @ExceptionHandler({RuntimeException.class})
     public ResponseEntity<ExceptionMessage> handleInternalServerErrorException(RuntimeException exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.INTERNAL_SERVER_ERROR.value(), exception.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @ExceptionHandler({ResourceNotFoundException.class})
     public ResponseEntity<ExceptionMessage> handleResourceNotFoundException(RuntimeException exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.NOT_FOUND.value(), exception.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(NoHandlerFoundException.class)
     public ResponseEntity<ExceptionMessage> handleNoHandlerFoundException(NoHandlerFoundException exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.NOT_FOUND.value(), exception.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public ResponseEntity<ExceptionMessage> handleMethodNotAllowed(Exception exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.METHOD_NOT_ALLOWED.value(), exception.getMessage()), HttpStatus.METHOD_NOT_ALLOWED);
     }
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
     public ResponseEntity<ExceptionMessage> handleMethodArgumentTypeMismatchException(Exception exception) {
-        log.error(exception.getMessage());
         return new ResponseEntity<>(new ExceptionMessage(HttpStatus.BAD_REQUEST.value(), "Invalid input!"), HttpStatus.BAD_REQUEST);
     }
 }
