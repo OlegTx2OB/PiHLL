@@ -79,6 +79,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
         //return mCache.getAll();
         return mPriceByWeightMapper.toDtos(mPriceByWeightRepository.findAll());
     }
+
     @Override
     public void createPriceByWeightBulk(List<PriceByWeight> priceByWeights) {
         if (priceByWeights == null) {
