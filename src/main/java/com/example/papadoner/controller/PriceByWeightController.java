@@ -3,6 +3,8 @@ package com.example.papadoner.controller;
 import com.example.papadoner.dto.PriceByWeightDto;
 import com.example.papadoner.model.PriceByWeight;
 import com.example.papadoner.service.PriceByWeightService;
+import com.example.papadoner.service.RequestCounterService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,15 +12,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Log4j2
 @RestController
 @RequestMapping("/priceByWeight")
 public class PriceByWeightController {
 
     private final PriceByWeightService mPriceByWeightService;
+    private final RequestCounterService mRequestCounterService;
 
     @Autowired
-    public PriceByWeightController(PriceByWeightService priceByWeightService) {
+    public PriceByWeightController(
+            PriceByWeightService priceByWeightService,
+            RequestCounterService requestCounterService
+    ) {
         this.mPriceByWeightService = priceByWeightService;
+        this.mRequestCounterService = requestCounterService;
     }
 
     @PostMapping
@@ -34,6 +42,7 @@ public class PriceByWeightController {
 
     @GetMapping("/{id}")
     public ResponseEntity<PriceByWeightDto> getPriceByWeightById(@PathVariable("id") long id) {
+        log.info("{}", mRequestCounterService.requestIncrement());
         PriceByWeightDto priceByWeight = mPriceByWeightService.getPriceByWeightById(id);
         return new ResponseEntity<>(priceByWeight, HttpStatus.OK);
     }

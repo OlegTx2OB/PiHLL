@@ -1,27 +1,53 @@
-[2024-04-11 22:09:59] INFO  - GET endpoint getAllIngredients [class IngredientController] was called
-[2024-04-11 22:10:13] INFO  - GET endpoint getAllIngredients [class IngredientController] was called
-[2024-04-11 22:10:35] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 8660 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-11 22:10:35] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-11 22:10:35] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-11 22:10:35] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-11 22:10:35] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-11 22:10:35] INFO  - Finished Spring Data repository scanning in 29 ms. Found 5 JPA repository interfaces.
-[2024-04-11 22:10:36] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-11 22:10:36] INFO  - Root WebApplicationContext: initialization completed in 759 ms
-[2024-04-11 22:10:36] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-11 22:10:36] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-11 22:10:36] INFO  - HHH000026: Second-level cache disabled
-[2024-04-11 22:10:36] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-11 22:10:36] INFO  - HikariPool-1 - Starting...
-[2024-04-11 22:10:36] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cf945a
-[2024-04-11 22:10:36] INFO  - HikariPool-1 - Start completed.
-[2024-04-11 22:10:37] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-11 22:10:37] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-11 22:10:37] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-11 22:10:37] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-11 22:10:38] INFO  - LiveReload server is running on port 35729
-[2024-04-11 22:10:38] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-11 22:10:38] INFO  - Started PapaDonerApplication in 2.78 seconds (process running for 3.158)
-[2024-04-11 22:10:38] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-11 22:10:38] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-11 22:10:38] INFO  - HikariPool-1 - Shutdown completed.
+[2024-04-23 09:13:40] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 13100 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-23 09:13:40] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-23 09:13:40] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-04-23 09:13:40] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-04-23 09:13:41] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-23 09:13:41] INFO  - Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
+[2024-04-23 09:13:42] INFO  - Tomcat initialized with port 8080 (http)
+[2024-04-23 09:13:42] INFO  - Starting service [Tomcat]
+[2024-04-23 09:13:42] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-04-23 09:13:42] INFO  - Initializing Spring embedded WebApplicationContext
+[2024-04-23 09:13:42] INFO  - Root WebApplicationContext: initialization completed in 1182 ms
+[2024-04-23 09:13:42] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-23 09:13:42] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-04-23 09:13:42] INFO  - HHH000026: Second-level cache disabled
+[2024-04-23 09:13:42] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-23 09:13:42] INFO  - HikariPool-1 - Starting...
+[2024-04-23 09:13:42] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f7a3f82
+[2024-04-23 09:13:42] INFO  - HikariPool-1 - Start completed.
+[2024-04-23 09:13:43] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-23 09:13:43] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-23 09:13:43] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-04-23 09:13:44] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-23 09:13:44] INFO  - LiveReload server is running on port 35729
+[2024-04-23 09:13:44] INFO  - Tomcat started on port 8080 (http) with context path ''
+[2024-04-23 09:13:44] INFO  - Started PapaDonerApplication in 3.922 seconds (process running for 4.395)
+[2024-04-23 09:15:07] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-23 09:15:07] INFO  - HikariPool-1 - Shutdown initiated...
+[2024-04-23 09:15:07] INFO  - HikariPool-1 - Shutdown completed.
+[2024-04-23 09:15:10] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 5332 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-23 09:15:10] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-23 09:15:10] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-04-23 09:15:10] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-04-23 09:15:10] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-23 09:15:10] INFO  - Finished Spring Data repository scanning in 32 ms. Found 5 JPA repository interfaces.
+[2024-04-23 09:15:11] INFO  - Tomcat initialized with port 8080 (http)
+[2024-04-23 09:15:11] INFO  - Starting service [Tomcat]
+[2024-04-23 09:15:11] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-04-23 09:15:11] INFO  - Initializing Spring embedded WebApplicationContext
+[2024-04-23 09:15:11] INFO  - Root WebApplicationContext: initialization completed in 961 ms
+[2024-04-23 09:15:11] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-23 09:15:11] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-04-23 09:15:11] INFO  - HHH000026: Second-level cache disabled
+[2024-04-23 09:15:11] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-23 09:15:11] INFO  - HikariPool-1 - Starting...
+[2024-04-23 09:15:11] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c4ae210
+[2024-04-23 09:15:11] INFO  - HikariPool-1 - Start completed.
+[2024-04-23 09:15:12] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-23 09:15:12] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-23 09:15:12] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-04-23 09:15:13] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-23 09:15:13] INFO  - LiveReload server is running on port 35729
+[2024-04-23 09:15:13] INFO  - Tomcat started on port 8080 (http) with context path ''
+[2024-04-23 09:15:13] INFO  - Started PapaDonerApplication in 3.746 seconds (process running for 4.18)
