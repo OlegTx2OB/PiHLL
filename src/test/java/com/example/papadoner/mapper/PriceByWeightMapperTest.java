@@ -9,19 +9,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PriceByWeightMapperTest {
-    @Test //todo так-то нахуй не нужно
-    public void toDto_CorrectConvertation_PriceByWeightMapperTest() {
-        //Setup
-        PriceByWeight entity = new PriceByWeight(1, 500, 0.5);
-
-        //Act
-        PriceByWeightDto dto = PriceByWeightMapper.toDto(entity);
-
-        //Assert
-        assertEquals(entity.getId(), dto.getId());
-        assertEquals(entity.getWeight(), dto.getWeight());
-        assertEquals(entity.getPrice(), dto.getPrice());
-    }
 
     @Test
     public void toDtos_CorrectConvertation_PriceByWeightMapperTest() {
