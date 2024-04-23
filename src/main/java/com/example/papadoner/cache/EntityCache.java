@@ -22,7 +22,8 @@ public class EntityCache<K, V> {
         return new ArrayList<>(mCacheMap.values());
     }
 
-    public void remove(K key) {
+    public boolean remove(K key) {
         mCacheMap.remove(key);
+        return true;
     }
 }
