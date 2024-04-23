@@ -19,17 +19,14 @@ import java.util.List;
 public class PriceByWeightServiceImpl implements PriceByWeightService {
 
     private final PriceByWeightRepository mPriceByWeightRepository;
-    private final PriceByWeightMapper mPriceByWeightMapper;
 
     private final EntityCache<Long, PriceByWeightDto> mCache;
     boolean isCacheInitialized = false;
 
     @Autowired
     public PriceByWeightServiceImpl(PriceByWeightRepository priceByWeightRepository,
-                                    PriceByWeightMapper priceByWeightMapper,
                                     EntityCache<Long, PriceByWeightDto> cache) {
         this.mPriceByWeightRepository = priceByWeightRepository;
-        this.mPriceByWeightMapper = priceByWeightMapper;
         this.mCache = cache;
     }
 
@@ -37,9 +34,9 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     public PriceByWeightDto createPriceByWeight(PriceByWeight priceByWeight) {
         initializeCacheIfClear();
 
-        PriceByWeightDto priceByWeightDto = mPriceByWeightMapper
+        PriceByWeightDto priceByWeightDto = PriceByWeightMapper
                 .toDto(mPriceByWeightRepository.save(priceByWeight));
-        mCache.put(priceByWeight.getId(), mPriceByWeightMapper.toDto(priceByWeight));
+        mCache.put(priceByWeight.getId(), PriceByWeightMapper.toDto(priceByWeight));
         return priceByWeightDto;
     }
 
@@ -59,9 +56,9 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
                 .orElseThrow(() -> new EntityNotFoundException("PriceByWeight with id " + id + " not found"));
         newPriceByWeight.setId(oldPriceByWeight.getId());
 
-        mCache.put(newPriceByWeight.getId(), mPriceByWeightMapper.toDto(newPriceByWeight));
+        mCache.put(newPriceByWeight.getId(), PriceByWeightMapper.toDto(newPriceByWeight));
 
-        return mPriceByWeightMapper.toDto(mPriceByWeightRepository.save(newPriceByWeight));
+        return PriceByWeightMapper.toDto(mPriceByWeightRepository.save(newPriceByWeight));
 
     }
 
@@ -77,7 +74,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     public List<PriceByWeightDto> getAllPriceByWeights() {
         initializeCacheIfClear();
         //return mCache.getAll();
-        return mPriceByWeightMapper.toDtos(mPriceByWeightRepository.findAll());
+        return PriceByWeightMapper.toDtos(mPriceByWeightRepository.findAll());
     }
 
     @Override
@@ -95,7 +92,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
         List<PriceByWeight> priceByWeights = mPriceByWeightRepository.findAll();
 
         for (PriceByWeight priceByWeight : priceByWeights) {
-            mCache.put(priceByWeight.getId(), mPriceByWeightMapper.toDto(priceByWeight));
+            mCache.put(priceByWeight.getId(), PriceByWeightMapper.toDto(priceByWeight));
         }
         isCacheInitialized = true;
     }

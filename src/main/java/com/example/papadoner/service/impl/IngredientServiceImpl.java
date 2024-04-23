@@ -23,22 +23,19 @@ import java.util.Set;
 public class IngredientServiceImpl implements IngredientService {
     private final IngredientRepository mIngredientRepository;
     private final DonerRepository mDonerRepository;
-    private final IngredientMapper mIngredientMapper;
 
     @Autowired
     public IngredientServiceImpl(IngredientRepository ingredientRepository,
-                                 DonerRepository donerRepository,
-                                 IngredientMapper ingredientMapper) {
+                                 DonerRepository donerRepository) {
         this.mIngredientRepository = ingredientRepository;
         this.mDonerRepository = donerRepository;
-        this.mIngredientMapper = ingredientMapper;
     }
 
     @Override
     public IngredientDto createIngredient(Ingredient ingredient, @Nullable Set<String> donerNames) {
         List<Doner> doners = getDoners(donerNames);
         ingredient.getDoners().addAll(doners);
-        IngredientDto ingredientDto = mIngredientMapper.toDto(mIngredientRepository.save(ingredient));
+        IngredientDto ingredientDto = IngredientMapper.toDto(mIngredientRepository.save(ingredient));
         saveIngredientInDoners(ingredient, doners);
         return ingredientDto;
     }
@@ -53,7 +50,7 @@ public class IngredientServiceImpl implements IngredientService {
     @Override
     public IngredientDto getIngredientByName(String name) {
         Optional<Ingredient> ingredient = mIngredientRepository.findByName(name);
-        return mIngredientMapper.toDto(ingredient
+        return IngredientMapper.toDto(ingredient
                 .orElseThrow(() -> new EntityNotFoundException("Ingredient with name " + name + " not found")));
     }
 
@@ -66,7 +63,7 @@ public class IngredientServiceImpl implements IngredientService {
         newIngredient.setId(oldIngredient.getId());
 
         newIngredient.getDoners().addAll(doners);
-        IngredientDto ingredientDto = mIngredientMapper.toDto(mIngredientRepository.save(newIngredient));
+        IngredientDto ingredientDto = IngredientMapper.toDto(mIngredientRepository.save(newIngredient));
         saveIngredientInDoners(newIngredient, doners);
         return ingredientDto;
     }
@@ -86,7 +83,7 @@ public class IngredientServiceImpl implements IngredientService {
 
     @Override
     public List<IngredientDto> getAllIngredients() {
-        return mIngredientMapper.toDtos(mIngredientRepository.findAll());
+        return IngredientMapper.toDtos(mIngredientRepository.findAll());
     }
 
     private List<Doner> getDoners(Set<String> donerNames) {

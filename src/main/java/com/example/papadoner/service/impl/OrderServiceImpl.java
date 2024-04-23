@@ -24,17 +24,14 @@ public class OrderServiceImpl implements OrderService {
     private final OrderRepository mOrderRepository;
     private final UserRepository mUserRepository;
     private final DonerRepository mDonerRepository;
-    private final OrderMapper mOrderMapper;
 
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository,
                             UserRepository userRepository,
-                            DonerRepository donerRepository,
-                            OrderMapper orderMapper) {
+                            DonerRepository donerRepository) {
         this.mOrderRepository = orderRepository;
         this.mUserRepository = userRepository;
         this.mDonerRepository = donerRepository;
-        this.mOrderMapper = orderMapper;
     }
 
     @Override
@@ -44,12 +41,12 @@ public class OrderServiceImpl implements OrderService {
                     .orElseThrow(() -> new EntityNotFoundException("User with id " + userId + " not found")));
         }
         order = setDoners(order, donerIds);
-        return mOrderMapper.toDto(mOrderRepository.save(order));
+        return OrderMapper.toDto(mOrderRepository.save(order));
     }
 
     @Override
     public OrderDto getOrderById(long id) {
-        return mOrderMapper.toDto(mOrderRepository.findById(id)
+        return OrderMapper.toDto(mOrderRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found")));
     }
 
@@ -64,7 +61,7 @@ public class OrderServiceImpl implements OrderService {
         Order oldOrder = mOrderRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Order with id " + id + " not found"));
         newOrder.setId(oldOrder.getId());
-        return mOrderMapper.toDto(mOrderRepository.save(newOrder));
+        return OrderMapper.toDto(mOrderRepository.save(newOrder));
     }
 
     @Override
@@ -74,7 +71,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<OrderDto> getAllOrders() {
-        return mOrderMapper.toDtos(mOrderRepository.findAll());
+        return OrderMapper.toDtos(mOrderRepository.findAll());
     }
 
     private Order setDoners(Order order, List<Long> donerIds) {

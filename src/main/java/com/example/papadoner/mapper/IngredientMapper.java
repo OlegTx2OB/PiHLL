@@ -9,11 +9,11 @@ import java.util.List;
 
 @Component
 public class IngredientMapper {
-    public IngredientDto toDto(Ingredient ingredient) {
+    public static IngredientDto toDto(Ingredient ingredient) {
         return new IngredientDto(ingredient.getId(), ingredient.getName());
     }
 
-    public List<IngredientDto> toDtos(List<Ingredient> ingredients) {
+    public static List<IngredientDto> toDtos(List<Ingredient> ingredients) {
         List<IngredientDto> ingredientDtos = new ArrayList<>();
         if (ingredients != null) {
             for (Ingredient ingredient : ingredients) {

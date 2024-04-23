@@ -24,26 +24,23 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository mUserRepository;
     private final OrderRepository mOrderRepository;
-    private final UserMapper mUserMapper;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository,
-                           OrderRepository orderRepository,
-                           UserMapper userMapper) {
+                           OrderRepository orderRepository) {
         this.mUserRepository = userRepository;
         this.mOrderRepository = orderRepository;
-        this.mUserMapper = userMapper;
     }
 
     @Override
     public UserDto createUser(User user, @Nullable Set<Long> orderIds) {
         user = setOrders(user, orderIds);
-        return mUserMapper.toDto(mUserRepository.save(user));
+        return UserMapper.toDto(mUserRepository.save(user));
     }
 
     @Override
     public UserDto getUserById(long id) {
-        return mUserMapper.toDto(mUserRepository.findById(id)
+        return UserMapper.toDto(mUserRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("User with id " + id + " not found")));
     }
 
@@ -55,7 +52,7 @@ public class UserServiceImpl implements UserService {
         if (optionalOldUser.isPresent()) {
             User oldUser = optionalOldUser.get();
             newUser.setId(oldUser.getId());
-            return mUserMapper.toDto(mUserRepository.save(newUser));
+            return UserMapper.toDto(mUserRepository.save(newUser));
         } else {
             throw new EntityNotFoundException("User with id " + id + " not found");
         }
@@ -68,12 +65,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserDto> getAllUsers() {
-        return mUserMapper.toDtos(mUserRepository.findAll());
+        return UserMapper.toDtos(mUserRepository.findAll());
     }
 
     @Override
     public List<UserDto> findUsersWithMoreOrdersThan(int count) {
-        return mUserMapper.toDtos(mUserRepository.findUsersWithMoreOrdersThan(count));
+        return UserMapper.toDtos(mUserRepository.findUsersWithMoreOrdersThan(count));
     }
 
     private User setOrders(User user, Set<Long> orderIds) {

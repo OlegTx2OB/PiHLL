@@ -72,6 +72,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <version>0.8.12</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -91,7 +96,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.7</version>
+                <version>0.8.12</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -104,9 +109,10 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <phase>test</phase>
                         <configuration>
                             <formats>
-                                <format>XML</format>
+                                <format>HTML</format>
                             </formats>
                         </configuration>
                     </execution>

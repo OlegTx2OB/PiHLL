@@ -10,11 +10,11 @@ import java.util.List;
 @Component
 public class PriceByWeightMapper {
 
-    public PriceByWeightDto toDto(PriceByWeight p) {
+    public static PriceByWeightDto toDto(PriceByWeight p) {
         return new PriceByWeightDto(p.getId(), p.getWeight(), p.getPrice());
     }
 
-    public List<PriceByWeightDto> toDtos(List<PriceByWeight> ps) {
+    public static List<PriceByWeightDto> toDtos(List<PriceByWeight> ps) {
         List<PriceByWeightDto> priceByWeightDtos = new ArrayList<>();
         if (ps != null) {
             for (PriceByWeight p : ps) {

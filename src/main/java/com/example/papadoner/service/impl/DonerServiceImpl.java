@@ -24,7 +24,6 @@ import java.util.Set;
 public class DonerServiceImpl implements DonerService {
 
     private final DonerRepository mDonerRepository;
-    private final DonerMapper mDonerMapper;
     private final IngredientRepository mIngredientRepository;
 
     private final PriceByWeightRepository mPriceByWeightRepository;
@@ -32,11 +31,9 @@ public class DonerServiceImpl implements DonerService {
     @Autowired
     public DonerServiceImpl(DonerRepository donerRepository,
                             PriceByWeightRepository priceByWeightRepository,
-                            DonerMapper donerMapper,
                             IngredientRepository ingredientRepository) {
         this.mDonerRepository = donerRepository;
         this.mPriceByWeightRepository = priceByWeightRepository;
-        this.mDonerMapper = donerMapper;
         this.mIngredientRepository = ingredientRepository;
     }
 
@@ -50,7 +47,7 @@ public class DonerServiceImpl implements DonerService {
         List<PriceByWeight> priceByWeights = getPriceByWeights(priceByWeightIds);
         doner.getIngredients().addAll(ingredients);
         doner.getPricesByWeight().addAll(priceByWeights);
-        DonerDto donerDto = mDonerMapper.toDto(mDonerRepository.save(doner));
+        DonerDto donerDto = DonerMapper.toDto(mDonerRepository.save(doner));
 
         saveDonerInIngredients(doner, ingredients);
 
@@ -63,7 +60,7 @@ public class DonerServiceImpl implements DonerService {
         if (doners.size() == 0) {
             throw new EntityNotFoundException("Doner with name " + name + " not found");
         }
-        return mDonerMapper.toDtos(doners);
+        return DonerMapper.toDtos(doners);
     }
 
     @Override
@@ -81,7 +78,7 @@ public class DonerServiceImpl implements DonerService {
 
         newDoner.getIngredients().addAll(ingredients);
         newDoner.getPricesByWeight().addAll(priceByWeights);
-        DonerDto donerDto = mDonerMapper.toDto(mDonerRepository.save(newDoner));
+        DonerDto donerDto = DonerMapper.toDto(mDonerRepository.save(newDoner));
         saveDonerInIngredients(newDoner, ingredients);
 
         return donerDto;
@@ -104,7 +101,7 @@ public class DonerServiceImpl implements DonerService {
 
     @Override
     public List<DonerDto> getAllDoners() {
-        return mDonerMapper.toDtos(mDonerRepository.findAll());
+        return DonerMapper.toDtos(mDonerRepository.findAll());
     }
 
     private List<Ingredient> getIngredients(Set<String> ingredientNames) {
