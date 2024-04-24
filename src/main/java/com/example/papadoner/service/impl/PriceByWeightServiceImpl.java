@@ -21,7 +21,6 @@ import java.util.List;
 public class PriceByWeightServiceImpl implements PriceByWeightService {
 
     private final PriceByWeightRepository mPriceByWeightRepository;
-
     private final EntityCache<Long, PriceByWeightDto> mCache;
     boolean isCacheInitialized = false;
 

@@ -1,196 +1,921 @@
-[2024-04-23 09:13:40] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 13100 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 09:13:40] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 09:13:40] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 09:13:40] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 09:13:41] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 09:13:41] INFO  - Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
-[2024-04-23 09:13:42] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 09:13:42] INFO  - Starting service [Tomcat]
-[2024-04-23 09:13:42] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 09:13:42] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 09:13:42] INFO  - Root WebApplicationContext: initialization completed in 1182 ms
-[2024-04-23 09:13:42] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 09:13:42] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 09:13:42] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 09:13:42] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 09:13:42] INFO  - HikariPool-1 - Starting...
-[2024-04-23 09:13:42] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f7a3f82
-[2024-04-23 09:13:42] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 09:13:43] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 09:13:43] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:13:43] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 09:13:44] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 09:13:44] INFO  - LiveReload server is running on port 35729
-[2024-04-23 09:13:44] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 09:13:44] INFO  - Started PapaDonerApplication in 3.922 seconds (process running for 4.395)
-[2024-04-23 09:15:07] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:15:07] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 09:15:07] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 09:15:10] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 5332 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 09:15:10] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 09:15:10] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 09:15:10] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 09:15:10] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 09:15:10] INFO  - Finished Spring Data repository scanning in 32 ms. Found 5 JPA repository interfaces.
-[2024-04-23 09:15:11] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 09:15:11] INFO  - Starting service [Tomcat]
-[2024-04-23 09:15:11] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 09:15:11] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 09:15:11] INFO  - Root WebApplicationContext: initialization completed in 961 ms
-[2024-04-23 09:15:11] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 09:15:11] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 09:15:11] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 09:15:11] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 09:15:11] INFO  - HikariPool-1 - Starting...
-[2024-04-23 09:15:11] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c4ae210
-[2024-04-23 09:15:11] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 09:15:12] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 09:15:12] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:15:12] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 09:15:13] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 09:15:13] INFO  - LiveReload server is running on port 35729
-[2024-04-23 09:15:13] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 09:15:13] INFO  - Started PapaDonerApplication in 3.746 seconds (process running for 4.18)
-[2024-04-23 09:25:44] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:25:44] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 09:25:44] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 09:25:46] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 16948 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 09:25:46] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 09:25:46] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 09:25:46] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 09:25:47] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 09:25:47] INFO  - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
-[2024-04-23 09:25:47] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 09:25:47] INFO  - Starting service [Tomcat]
-[2024-04-23 09:25:47] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 09:25:47] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 09:25:47] INFO  - Root WebApplicationContext: initialization completed in 914 ms
-[2024-04-23 09:25:47] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 09:25:47] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 09:25:47] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 09:25:48] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 09:25:48] INFO  - HikariPool-1 - Starting...
-[2024-04-23 09:25:48] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@57df2072
-[2024-04-23 09:25:48] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 09:25:48] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 09:25:48] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:25:49] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 09:25:49] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 09:25:50] INFO  - LiveReload server is running on port 35729
-[2024-04-23 09:25:50] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 09:25:50] INFO  - Started PapaDonerApplication in 3.574 seconds (process running for 3.958)
-[2024-04-23 09:27:36] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:27:36] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 09:27:36] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 09:27:40] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 3464 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 09:27:40] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 09:27:40] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 09:27:40] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 09:27:40] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 09:27:40] INFO  - Finished Spring Data repository scanning in 38 ms. Found 5 JPA repository interfaces.
-[2024-04-23 09:27:41] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 09:27:41] INFO  - Starting service [Tomcat]
-[2024-04-23 09:27:41] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 09:27:41] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 09:27:41] INFO  - Root WebApplicationContext: initialization completed in 974 ms
-[2024-04-23 09:27:41] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 09:27:41] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 09:27:41] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 09:27:41] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 09:27:41] INFO  - HikariPool-1 - Starting...
-[2024-04-23 09:27:41] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7236b177
-[2024-04-23 09:27:41] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 09:27:42] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 09:27:42] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:27:42] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 09:27:42] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 09:27:43] INFO  - LiveReload server is running on port 35729
-[2024-04-23 09:27:43] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 09:27:43] INFO  - Started PapaDonerApplication in 3.618 seconds (process running for 3.997)
-[2024-04-23 09:28:00] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 09:28:00] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 09:28:00] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 12:49:50] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 14408 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 12:49:50] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 12:49:50] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 12:49:50] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 12:49:51] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 12:49:51] INFO  - Finished Spring Data repository scanning in 28 ms. Found 5 JPA repository interfaces.
-[2024-04-23 12:49:51] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 12:49:51] INFO  - Starting service [Tomcat]
-[2024-04-23 12:49:51] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 12:49:51] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 12:49:51] INFO  - Root WebApplicationContext: initialization completed in 1007 ms
-[2024-04-23 12:49:51] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 12:49:52] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 12:49:52] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 12:49:52] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 12:49:52] INFO  - HikariPool-1 - Starting...
-[2024-04-23 12:49:52] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c4ae210
-[2024-04-23 12:49:52] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 12:49:52] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 12:49:52] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:49:53] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 12:49:53] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 12:49:54] INFO  - LiveReload server is running on port 35729
-[2024-04-23 12:49:54] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 12:49:54] INFO  - Started PapaDonerApplication in 3.678 seconds (process running for 4.079)
-[2024-04-23 12:55:03] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:55:03] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 12:55:03] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 12:55:07] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 12252 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 12:55:07] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 12:55:07] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 12:55:07] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 12:55:07] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 12:55:08] INFO  - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
-[2024-04-23 12:55:08] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 12:55:08] INFO  - Starting service [Tomcat]
-[2024-04-23 12:55:08] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 12:55:08] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 12:55:08] INFO  - Root WebApplicationContext: initialization completed in 1083 ms
-[2024-04-23 12:55:08] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 12:55:08] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 12:55:08] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 12:55:08] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 12:55:08] INFO  - HikariPool-1 - Starting...
-[2024-04-23 12:55:09] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4276503f
-[2024-04-23 12:55:09] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 12:55:09] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 12:55:09] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:55:10] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 12:55:10] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 12:55:11] INFO  - LiveReload server is running on port 35729
-[2024-04-23 12:55:11] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 12:55:11] INFO  - Started PapaDonerApplication in 3.735 seconds (process running for 4.083)
-[2024-04-23 12:55:13] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:55:13] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 12:55:13] INFO  - HikariPool-1 - Shutdown completed.
-[2024-04-23 12:56:10] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 17544 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
-[2024-04-23 12:56:10] INFO  - No active profile set, falling back to 1 default profile: "default"
-[2024-04-23 12:56:10] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2024-04-23 12:56:10] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2024-04-23 12:56:10] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2024-04-23 12:56:11] INFO  - Finished Spring Data repository scanning in 33 ms. Found 5 JPA repository interfaces.
-[2024-04-23 12:56:11] INFO  - Tomcat initialized with port 8080 (http)
-[2024-04-23 12:56:11] INFO  - Starting service [Tomcat]
-[2024-04-23 12:56:11] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
-[2024-04-23 12:56:11] INFO  - Initializing Spring embedded WebApplicationContext
-[2024-04-23 12:56:11] INFO  - Root WebApplicationContext: initialization completed in 910 ms
-[2024-04-23 12:56:11] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-[2024-04-23 12:56:11] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
-[2024-04-23 12:56:11] INFO  - HHH000026: Second-level cache disabled
-[2024-04-23 12:56:11] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
-[2024-04-23 12:56:11] INFO  - HikariPool-1 - Starting...
-[2024-04-23 12:56:11] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b4035b6
-[2024-04-23 12:56:11] INFO  - HikariPool-1 - Start completed.
-[2024-04-23 12:56:12] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-[2024-04-23 12:56:12] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:56:13] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
-[2024-04-23 12:56:13] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2024-04-23 12:56:13] INFO  - LiveReload server is running on port 35729
-[2024-04-23 12:56:13] INFO  - Tomcat started on port 8080 (http) with context path ''
-[2024-04-23 12:56:13] INFO  - Started PapaDonerApplication in 3.541 seconds (process running for 3.905)
-[2024-04-23 12:56:15] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-[2024-04-23 12:56:15] INFO  - HikariPool-1 - Shutdown initiated...
-[2024-04-23 12:56:15] INFO  - HikariPool-1 - Shutdown completed.
+[2024-04-24 00:00:07] INFO  - Restarting due to 5 class path changes (0 additions, 0 deletions, 5 modifications)
+[2024-04-24 00:00:07] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 00:00:07] INFO  - HikariPool-1 - Shutdown initiated...
+[2024-04-24 00:00:07] INFO  - HikariPool-1 - Shutdown completed.
+[2024-04-24 00:00:08] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 6384 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 00:00:08] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 00:00:08] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-24 00:00:08] INFO  - Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+[2024-04-24 00:00:08] INFO  - Tomcat initialized with port 8080 (http)
+[2024-04-24 00:00:08] INFO  - Starting service [Tomcat]
+[2024-04-24 00:00:08] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-04-24 00:00:08] INFO  - Initializing Spring embedded WebApplicationContext
+[2024-04-24 00:00:08] INFO  - Root WebApplicationContext: initialization completed in 437 ms
+[2024-04-24 00:00:08] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-24 00:00:08] INFO  - HHH000026: Second-level cache disabled
+[2024-04-24 00:00:08] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-24 00:00:08] INFO  - HikariPool-2 - Starting...
+[2024-04-24 00:00:08] INFO  - HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@4900f79
+[2024-04-24 00:00:08] INFO  - HikariPool-2 - Start completed.
+[2024-04-24 00:00:08] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-24 00:00:08] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 00:00:09] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-24 00:00:09] INFO  - LiveReload server is running on port 35729
+[2024-04-24 00:00:09] INFO  - Tomcat started on port 8080 (http) with context path ''
+[2024-04-24 00:00:09] INFO  - Started PapaDonerApplication in 1.584 seconds (process running for 495.346)
+[2024-04-24 00:00:09] INFO  - Condition evaluation unchanged
+[2024-04-24 00:05:18] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 00:05:18] INFO  - HikariPool-2 - Shutdown initiated...
+[2024-04-24 00:05:18] INFO  - HikariPool-2 - Shutdown completed.
+[2024-04-24 00:05:52] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 18604 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 00:05:52] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 00:05:52] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-04-24 00:05:52] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-04-24 00:05:52] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-24 00:05:52] INFO  - Finished Spring Data repository scanning in 30 ms. Found 5 JPA repository interfaces.
+[2024-04-24 00:05:53] INFO  - Tomcat initialized with port 8080 (http)
+[2024-04-24 00:05:53] INFO  - Starting service [Tomcat]
+[2024-04-24 00:05:53] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-04-24 00:05:53] INFO  - Initializing Spring embedded WebApplicationContext
+[2024-04-24 00:05:53] INFO  - Root WebApplicationContext: initialization completed in 937 ms
+[2024-04-24 00:05:53] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-24 00:05:53] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-04-24 00:05:53] INFO  - HHH000026: Second-level cache disabled
+[2024-04-24 00:05:53] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-24 00:05:53] INFO  - HikariPool-1 - Starting...
+[2024-04-24 00:05:53] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c5e36ae
+[2024-04-24 00:05:53] INFO  - HikariPool-1 - Start completed.
+[2024-04-24 00:05:54] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-24 00:05:54] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 00:05:55] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-04-24 00:05:55] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-24 00:05:55] INFO  - LiveReload server is running on port 35729
+[2024-04-24 00:05:55] INFO  - Tomcat started on port 8080 (http) with context path ''
+[2024-04-24 00:05:55] INFO  - Started PapaDonerApplication in 3.709 seconds (process running for 4.206)
+[2024-04-24 00:05:58] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 00:05:58] INFO  - HikariPool-1 - Shutdown initiated...
+[2024-04-24 00:05:58] INFO  - HikariPool-1 - Shutdown completed.
+[2024-04-24 01:14:10] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 11404 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:14:10] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:14:10] WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-04-24 01:14:10] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-04-24 01:14:10] ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.papadoner.controller.DonerController required a bean of type 'com.example.papadoner.service.DonerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.papadoner.service.DonerService' in your configuration.
+
+[2024-04-24 01:14:10] WARN  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.example.papadoner.controller.DonerControllerTest@55846997]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@224c7de4 testClass = com.example.papadoner.controller.DonerControllerTest, locations = [], classes = [com.example.papadoner.PapaDonerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@36ad229b key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@17503f6b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@36804139, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7d9f158f, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@11375b97, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@3051c80, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6950ed69, org.springframework.boot.test.context.SpringBootTestAnnotation@783d6ce2], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	... 96 common frames omitted
+[2024-04-24 01:14:24] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 6004 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:14:24] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:14:25] WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-04-24 01:14:25] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-04-24 01:14:25] ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.papadoner.controller.DonerController required a bean of type 'com.example.papadoner.service.DonerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.papadoner.service.DonerService' in your configuration.
+
+[2024-04-24 01:14:25] WARN  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.example.papadoner.controller.DonerControllerTest@36f6e521]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@60bf494c testClass = com.example.papadoner.controller.DonerControllerTest, locations = [], classes = [com.example.papadoner.PapaDonerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@47a4eee2 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3e0e1046, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@508dec2b, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@49b2a47d, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@38d8b6ac, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a862aa3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@77659b30, org.springframework.boot.test.context.SpringBootTestAnnotation@be55ac37], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	... 96 common frames omitted
+[2024-04-24 01:15:23] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 18248 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:15:23] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:15:23] WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-04-24 01:15:23] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-04-24 01:15:23] ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.papadoner.controller.DonerController required a bean of type 'com.example.papadoner.service.DonerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.papadoner.service.DonerService' in your configuration.
+
+[2024-04-24 01:15:23] WARN  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.example.papadoner.controller.DonerControllerTest@b5ac0c1]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3f857e08 testClass = com.example.papadoner.controller.DonerControllerTest, locations = [], classes = [com.example.papadoner.PapaDonerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6070775e key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@798162bc, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7486b455, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@21be3395, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@eb6e957d, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@a862aa3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@3cfdd820, org.springframework.boot.test.context.SpringBootTestAnnotation@6017d31], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	... 96 common frames omitted
+[2024-04-24 01:17:27] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 20156 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:17:27] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:17:28] WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-04-24 01:17:28] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-04-24 01:17:28] ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.papadoner.controller.DonerController required a bean of type 'com.example.papadoner.service.DonerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.papadoner.service.DonerService' in your configuration.
+
+[2024-04-24 01:17:28] WARN  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.example.papadoner.controller.DonerControllerTest@2afdf6b7]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@47a4eee2 testClass = com.example.papadoner.controller.DonerControllerTest, locations = [], classes = [com.example.papadoner.PapaDonerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@36f6e521 key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7486b455, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5efa40fe, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@147e2ae7, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@49435e9e, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@f7838cd7, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@15f47664, org.springframework.boot.test.context.SpringBootTestAnnotation@6d44444b], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	... 96 common frames omitted
+[2024-04-24 01:19:12] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 14788 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:19:12] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:19:14] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:19:14] INFO  - Initializing Servlet ''
+[2024-04-24 01:19:14] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:19:14] INFO  - Started DonerControllerTest in 1.505 seconds (process running for 2.833)
+[2024-04-24 01:19:25] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 4460 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:19:25] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:19:26] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:19:26] INFO  - Initializing Servlet ''
+[2024-04-24 01:19:26] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:19:26] INFO  - Started DonerControllerTest in 1.534 seconds (process running for 2.922)
+[2024-04-24 01:21:04] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 14968 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:21:04] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:21:05] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:21:05] INFO  - Initializing Servlet ''
+[2024-04-24 01:21:05] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:21:05] INFO  - Started DonerControllerTest in 1.508 seconds (process running for 2.776)
+[2024-04-24 01:24:21] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 11584 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:24:21] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:24:22] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:24:22] INFO  - Initializing Servlet ''
+[2024-04-24 01:24:22] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:24:22] INFO  - Started DonerControllerTest in 1.445 seconds (process running for 2.706)
+[2024-04-24 01:24:51] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 1728 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:24:51] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:24:52] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:24:52] INFO  - Initializing Servlet ''
+[2024-04-24 01:24:52] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:24:52] INFO  - Started DonerControllerTest in 1.461 seconds (process running for 2.884)
+[2024-04-24 01:25:03] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 15988 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:25:03] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:25:04] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:25:04] INFO  - Initializing Servlet ''
+[2024-04-24 01:25:04] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:25:04] INFO  - Started DonerControllerTest in 1.498 seconds (process running for 2.764)
+[2024-04-24 01:25:25] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 476 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:25:25] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:25:26] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:25:26] INFO  - Initializing Servlet ''
+[2024-04-24 01:25:26] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:25:26] INFO  - Started DonerControllerTest in 1.547 seconds (process running for 2.812)
+[2024-04-24 01:25:44] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 4932 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:25:44] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:25:45] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:25:45] INFO  - Initializing Servlet ''
+[2024-04-24 01:25:45] INFO  - Completed initialization in 3 ms
+[2024-04-24 01:25:45] INFO  - Started DonerControllerTest in 1.579 seconds (process running for 2.937)
+[2024-04-24 01:31:15] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 20004 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:31:15] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:31:16] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:31:16] INFO  - Initializing Servlet ''
+[2024-04-24 01:31:16] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:31:16] INFO  - Started DonerControllerTest in 1.465 seconds (process running for 2.615)
+[2024-04-24 01:34:00] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 18428 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:34:00] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:34:01] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:34:01] INFO  - Initializing Servlet ''
+[2024-04-24 01:34:01] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:34:01] INFO  - Started DonerControllerTest in 1.529 seconds (process running for 2.696)
+[2024-04-24 01:34:46] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 18812 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:34:46] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:34:47] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:34:47] INFO  - Initializing Servlet ''
+[2024-04-24 01:34:47] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:34:47] INFO  - Started DonerControllerTest in 1.449 seconds (process running for 2.671)
+[2024-04-24 01:55:08] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 3948 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:55:08] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:55:09] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:55:09] INFO  - Initializing Servlet ''
+[2024-04-24 01:55:09] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:55:09] INFO  - Started DonerControllerTest in 1.393 seconds (process running for 2.614)
+[2024-04-24 01:55:22] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 7832 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:55:22] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:55:23] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:55:23] INFO  - Initializing Servlet ''
+[2024-04-24 01:55:23] INFO  - Completed initialization in 2 ms
+[2024-04-24 01:55:23] INFO  - Started DonerControllerTest in 1.466 seconds (process running for 2.679)
+[2024-04-24 01:55:34] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 15136 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:55:34] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:55:35] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:55:35] INFO  - Initializing Servlet ''
+[2024-04-24 01:55:35] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:55:35] INFO  - Started DonerControllerTest in 1.536 seconds (process running for 2.748)
+[2024-04-24 01:57:59] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 10816 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 01:57:59] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 01:58:00] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 01:58:00] INFO  - Initializing Servlet ''
+[2024-04-24 01:58:00] INFO  - Completed initialization in 1 ms
+[2024-04-24 01:58:00] INFO  - Started DonerControllerTest in 1.446 seconds (process running for 2.712)
+[2024-04-24 02:25:01] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 2264 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:25:01] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:25:02] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:25:02] INFO  - Initializing Servlet ''
+[2024-04-24 02:25:02] INFO  - Completed initialization in 1 ms
+[2024-04-24 02:25:02] INFO  - Started DonerControllerTest in 1.353 seconds (process running for 2.586)
+[2024-04-24 02:25:25] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 12276 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:25:25] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:25:26] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:25:26] INFO  - Initializing Servlet ''
+[2024-04-24 02:25:26] INFO  - Completed initialization in 2 ms
+[2024-04-24 02:25:26] INFO  - Started DonerControllerTest in 1.419 seconds (process running for 2.703)
+[2024-04-24 02:40:44] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 6516 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:40:44] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:40:45] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:40:45] INFO  - Initializing Servlet ''
+[2024-04-24 02:40:45] INFO  - Completed initialization in 1 ms
+[2024-04-24 02:40:45] INFO  - Started DonerControllerTest in 1.496 seconds (process running for 2.726)
+[2024-04-24 02:41:04] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 18780 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:41:04] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:41:05] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:41:05] INFO  - Initializing Servlet ''
+[2024-04-24 02:41:05] INFO  - Completed initialization in 3 ms
+[2024-04-24 02:41:05] INFO  - Started DonerControllerTest in 1.453 seconds (process running for 2.609)
+[2024-04-24 02:45:35] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 5000 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:45:35] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:45:36] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:45:36] INFO  - Initializing Servlet ''
+[2024-04-24 02:45:36] INFO  - Completed initialization in 2 ms
+[2024-04-24 02:45:36] INFO  - Started DonerControllerTest in 1.656 seconds (process running for 2.921)
+[2024-04-24 02:47:11] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 16680 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:47:11] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:47:12] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:47:12] INFO  - Initializing Servlet ''
+[2024-04-24 02:47:12] INFO  - Completed initialization in 1 ms
+[2024-04-24 02:47:12] INFO  - Started DonerControllerTest in 1.525 seconds (process running for 2.714)
+[2024-04-24 02:47:32] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 20448 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:47:32] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:47:33] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:47:33] INFO  - Initializing Servlet ''
+[2024-04-24 02:47:33] INFO  - Completed initialization in 2 ms
+[2024-04-24 02:47:33] INFO  - Started DonerControllerTest in 1.472 seconds (process running for 2.678)
+[2024-04-24 02:47:47] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 8824 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:47:47] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:47:49] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:47:49] INFO  - Initializing Servlet ''
+[2024-04-24 02:47:49] INFO  - Completed initialization in 2 ms
+[2024-04-24 02:47:49] INFO  - Started DonerControllerTest in 1.522 seconds (process running for 2.808)
+[2024-04-24 02:48:02] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 6848 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 02:48:02] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 02:48:04] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 02:48:04] INFO  - Initializing Servlet ''
+[2024-04-24 02:48:04] INFO  - Completed initialization in 1 ms
+[2024-04-24 02:48:04] INFO  - Started DonerControllerTest in 1.561 seconds (process running for 2.892)
+[2024-04-24 08:49:18] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 6180 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:49:18] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:49:19] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:49:19] INFO  - Initializing Servlet ''
+[2024-04-24 08:49:19] INFO  - Completed initialization in 2 ms
+[2024-04-24 08:49:19] INFO  - Started DonerControllerTest in 1.597 seconds (process running for 2.851)
+[2024-04-24 08:54:10] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 11756 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:54:10] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:54:11] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:54:11] INFO  - Initializing Servlet ''
+[2024-04-24 08:54:11] INFO  - Completed initialization in 1 ms
+[2024-04-24 08:54:11] INFO  - Started DonerControllerTest in 1.37 seconds (process running for 2.504)
+[2024-04-24 08:56:15] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 5996 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:56:15] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:56:16] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:56:16] INFO  - Initializing Servlet ''
+[2024-04-24 08:56:16] INFO  - Completed initialization in 2 ms
+[2024-04-24 08:56:16] INFO  - Started DonerControllerTest in 1.323 seconds (process running for 2.525)
+[2024-04-24 08:56:24] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 4904 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:56:24] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:56:25] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:56:25] INFO  - Initializing Servlet ''
+[2024-04-24 08:56:25] INFO  - Completed initialization in 2 ms
+[2024-04-24 08:56:25] INFO  - Started DonerControllerTest in 1.348 seconds (process running for 2.523)
+[2024-04-24 08:58:06] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 15464 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:58:06] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:58:08] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:58:08] INFO  - Initializing Servlet ''
+[2024-04-24 08:58:08] INFO  - Completed initialization in 2 ms
+[2024-04-24 08:58:08] INFO  - Started DonerControllerTest in 1.452 seconds (process running for 2.587)
+[2024-04-24 08:58:26] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 10992 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 08:58:26] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 08:58:27] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 08:58:27] INFO  - Initializing Servlet ''
+[2024-04-24 08:58:27] INFO  - Completed initialization in 2 ms
+[2024-04-24 08:58:27] INFO  - Started DonerControllerTest in 1.357 seconds (process running for 2.544)
+[2024-04-24 09:10:20] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 9240 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 09:10:20] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 09:10:21] INFO  - Initializing Spring TestDispatcherServlet ''
+[2024-04-24 09:10:21] INFO  - Initializing Servlet ''
+[2024-04-24 09:10:21] INFO  - Completed initialization in 1 ms
+[2024-04-24 09:10:21] INFO  - Started DonerControllerTest in 1.63 seconds (process running for 2.856)
+[2024-04-24 09:10:43] INFO  - Starting DonerControllerTest using Java 20.0.1 with PID 6908 (started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 09:10:43] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 09:10:44] WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+[2024-04-24 09:10:44] INFO  - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[2024-04-24 09:10:44] ERROR - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.example.papadoner.controller.DonerController required a bean of type 'com.example.papadoner.service.DonerService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.example.papadoner.service.DonerService' in your configuration.
+
+[2024-04-24 09:10:44] WARN  - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [com.example.papadoner.controller.DonerControllerTest@49671897]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@55846997 testClass = com.example.papadoner.controller.DonerControllerTest, locations = [], classes = [com.example.papadoner.PapaDonerApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@805e72e key = [org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration, org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration, org.springframework.boot.autoconfigure.data.web.SpringDataWebAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.http.HttpMessageConvertersAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.groovy.template.GroovyTemplateAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7068e664, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@769a1df5, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@2f01783a, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@62f69118, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@374cffa5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@6aa8e115, org.springframework.boot.test.context.SpringBootTestAnnotation@f0d70def], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'donerController' defined in file [Z:\GitHub\SpringDonerShop\target\classes\com\example\papadoner\controller\DonerController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:959)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1454)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 72 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.papadoner.service.DonerService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1880)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:907)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:785)
+	... 96 common frames omitted
+[2024-04-24 11:23:06] INFO  - Starting PapaDonerApplication using Java 20.0.1 with PID 9732 (Z:\GitHub\SpringDonerShop\target\classes started by Tx2OB in Z:\GitHub\SpringDonerShop)
+[2024-04-24 11:23:06] INFO  - No active profile set, falling back to 1 default profile: "default"
+[2024-04-24 11:23:06] INFO  - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2024-04-24 11:23:06] INFO  - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2024-04-24 11:23:06] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-04-24 11:23:06] INFO  - Finished Spring Data repository scanning in 44 ms. Found 5 JPA repository interfaces.
+[2024-04-24 11:23:07] INFO  - Tomcat initialized with port 8080 (http)
+[2024-04-24 11:23:07] INFO  - Starting service [Tomcat]
+[2024-04-24 11:23:07] INFO  - Starting Servlet engine: [Apache Tomcat/10.1.19]
+[2024-04-24 11:23:07] INFO  - Initializing Spring embedded WebApplicationContext
+[2024-04-24 11:23:07] INFO  - Root WebApplicationContext: initialization completed in 1077 ms
+[2024-04-24 11:23:07] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2024-04-24 11:23:07] INFO  - HHH000412: Hibernate ORM core version 6.4.4.Final
+[2024-04-24 11:23:07] INFO  - HHH000026: Second-level cache disabled
+[2024-04-24 11:23:07] INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-04-24 11:23:07] INFO  - HikariPool-1 - Starting...
+[2024-04-24 11:23:07] INFO  - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@476e4c21
+[2024-04-24 11:23:07] INFO  - HikariPool-1 - Start completed.
+[2024-04-24 11:23:08] INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-04-24 11:23:08] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 11:23:09] INFO  - Hibernate is in classpath; If applicable, HQL parser will be used.
+[2024-04-24 11:23:09] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2024-04-24 11:23:09] INFO  - LiveReload server is running on port 35729
+[2024-04-24 11:23:10] INFO  - Tomcat started on port 8080 (http) with context path ''
+[2024-04-24 11:23:10] INFO  - Started PapaDonerApplication in 4.266 seconds (process running for 4.726)
+[2024-04-24 11:32:48] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2024-04-24 11:32:48] INFO  - HikariPool-1 - Shutdown initiated...
+[2024-04-24 11:32:48] INFO  - HikariPool-1 - Shutdown completed.

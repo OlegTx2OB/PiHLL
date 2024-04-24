@@ -152,4 +152,67 @@ public class DonerServiceImplTest {
         assertEquals(2, result.size());
     }
 
+    @Test
+    void deleteDoner_Success() {
+        // Arrange
+        long id = 1L;
+        Doner doner = new Doner(id, "name", List.of(), List.of());
+        when(mDonerRepository.findById(id)).thenReturn(Optional.of(doner));
+
+        // Act
+        mDonerService.deleteDoner(id);
+
+        // Assert
+        verify(mDonerRepository, times(1)).deleteById(id);
+        // Ensure that mIngredientRepository.save() is called for each ingredient
+        verify(mIngredientRepository, times(doner.getIngredients().size())).save(any());
+    }
+
+    @Test
+    void deleteDoner_DonerNotFound() {
+        // Arrange
+        long id = 1L;
+        when(mDonerRepository.findById(id)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        assertThrows(EntityNotFoundException.class, () -> mDonerService.deleteDoner(id));
+        // Ensure that mDonerRepository.deleteById() is not called
+        verify(mDonerRepository, never()).deleteById(id);
+        // Ensure that mIngredientRepository.save() is not called
+        verify(mIngredientRepository, never()).save(any());
+    }
+
+    @Test
+    void updateDoner_Success() {
+        // Arrange
+        long id = 1L;
+        Doner oldDoner = new Doner(id, "Old Doner", List.of(), List.of());
+        Doner newDoner = new Doner(id, "New Doner", new ArrayList<>(), new ArrayList<>()); // Изменено на создание изменяемых списков
+        when(mDonerRepository.findById(id)).thenReturn(Optional.of(oldDoner));
+        when(mDonerRepository.save(newDoner)).thenReturn(newDoner);
+
+        // Act
+        DonerDto result = mDonerService.updateDoner(id, newDoner, null, null);
+
+        // Assert
+        assertEquals("New Doner", result.getName());
+        // Ensure that oldDoner's ID is set to newDoner
+        assertEquals(id, newDoner.getId());
+        // Ensure that mDonerRepository.save() is called with newDoner
+        verify(mDonerRepository, times(1)).save(newDoner);
+    }
+
+    @Test
+    void updateDoner_DonerNotFound() {
+        // Arrange
+        long id = 1L;
+        Doner newDoner = new Doner(id, "New Doner", List.of(), List.of());
+        when(mDonerRepository.findById(id)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        assertThrows(EntityNotFoundException.class, () -> mDonerService.updateDoner(id, newDoner, null, null));
+        // Ensure that mDonerRepository.save() is not called
+        verify(mDonerRepository, never()).save(newDoner);
+    }
+
 }
