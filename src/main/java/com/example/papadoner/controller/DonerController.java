@@ -3,6 +3,7 @@ package com.example.papadoner.controller;
 import com.example.papadoner.dto.DonerDto;
 import com.example.papadoner.model.Doner;
 import com.example.papadoner.service.DonerService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Set;
 
+@Getter
 @RestController
 @RequestMapping("/doner")
 public class DonerController {
@@ -48,7 +50,7 @@ public class DonerController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteDoner(@PathVariable("id") long id) {
         mDonerService.deleteDoner(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping

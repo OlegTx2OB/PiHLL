@@ -8,10 +8,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class IngredientMapperTest {
+class IngredientMapperTest {
 
     @Test
-    public void toDtos_CorrectConvertation_IngredientMapperTest() {
+    void toDtos_CorrectConvertation_IngredientMapperTest() {
         //Setup
         Ingredient ingredient = new Ingredient();
         ingredient.setId(1);
@@ -29,7 +29,7 @@ public class IngredientMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassNullArg_IngredientMapperTest() {
+    void toDtos_GetEmptyListIfPassNullArg_IngredientMapperTest() {
         //Act
         List<IngredientDto> ingredientDtos = IngredientMapper.toDtos(null);
 
@@ -39,7 +39,7 @@ public class IngredientMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassEmptyList_IngredientMapperTest() {
+    void toDtos_GetEmptyListIfPassEmptyList_IngredientMapperTest() {
         //Act
         List<IngredientDto> ingredientDtos = IngredientMapper.toDtos(List.of());
 

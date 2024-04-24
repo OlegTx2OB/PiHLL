@@ -32,12 +32,11 @@ public class IngredientServiceImpl implements IngredientService {
     }
 
     @Override
-    public IngredientDto createIngredient(Ingredient ingredient, @Nullable Set<String> donerNames) {
+    public void createIngredient(Ingredient ingredient, @Nullable Set<String> donerNames) {
         List<Doner> doners = getDoners(donerNames);
         ingredient.getDoners().addAll(doners);
         IngredientDto ingredientDto = IngredientMapper.toDto(mIngredientRepository.save(ingredient));
         saveIngredientInDoners(ingredient, doners);
-        return ingredientDto;
     }
 
     private void saveIngredientInDoners(Ingredient ingredient, List<Doner> doners) {

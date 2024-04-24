@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto createUser(User user, @Nullable Set<Long> orderIds) {
+    public void createUser(User user, @Nullable Set<Long> orderIds) {
         user = setOrders(user, orderIds);
-        return UserMapper.toDto(mUserRepository.save(user));
+        UserMapper.toDto(mUserRepository.save(user));
     }
 
     @Override

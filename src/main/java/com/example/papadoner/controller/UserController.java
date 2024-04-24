@@ -3,6 +3,7 @@ package com.example.papadoner.controller;
 import com.example.papadoner.dto.UserDto;
 import com.example.papadoner.model.User;
 import com.example.papadoner.service.UserService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Set;
 
+@Getter
 @RestController
 @RequestMapping("/user")
 public class UserController {

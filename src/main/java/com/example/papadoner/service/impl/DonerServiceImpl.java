@@ -38,7 +38,7 @@ public class DonerServiceImpl implements DonerService {
     }
 
     @Override
-    public DonerDto createDoner(Doner doner,
+    public void createDoner(Doner doner,
                                 @Nullable Set<String> ingredientNames,
                                 @Nullable Set<Long> priceByWeightIds) {
         //manually creating two-way link because of @ManyToMany
@@ -50,8 +50,6 @@ public class DonerServiceImpl implements DonerService {
         DonerDto donerDto = DonerMapper.toDto(mDonerRepository.save(doner));
 
         saveDonerInIngredients(doner, ingredients);
-
-        return donerDto;
     }
 
     @Override

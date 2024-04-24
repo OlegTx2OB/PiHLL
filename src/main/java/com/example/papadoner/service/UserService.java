@@ -8,7 +8,7 @@ import java.util.Set;
 
 public interface UserService {
 
-    UserDto createUser(User user, Set<Long> orderIds);
+    void createUser(User user, Set<Long> orderIds);
 
     UserDto getUserById(long id);
 

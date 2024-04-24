@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PriceByWeightService {
 
-    PriceByWeightDto createPriceByWeight(PriceByWeight priceByWeight);
+    void createPriceByWeight(PriceByWeight priceByWeight);
 
     PriceByWeightDto getPriceByWeightById(long id);
 

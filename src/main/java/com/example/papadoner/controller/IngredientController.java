@@ -3,6 +3,7 @@ package com.example.papadoner.controller;
 import com.example.papadoner.dto.IngredientDto;
 import com.example.papadoner.model.Ingredient;
 import com.example.papadoner.service.IngredientService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Set;
 
+@Getter
 @RestController
 @RequestMapping("/ingredient")
 public class IngredientController {
@@ -55,4 +57,5 @@ public class IngredientController {
         List<IngredientDto> ingredientDtos = mIngredientService.getAllIngredients();
         return new ResponseEntity<>(ingredientDtos, HttpStatus.OK);
     }
+
 }

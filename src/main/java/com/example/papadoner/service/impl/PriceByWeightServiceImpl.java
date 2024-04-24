@@ -31,13 +31,12 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     }
 
     @Override
-    public PriceByWeightDto createPriceByWeight(PriceByWeight priceByWeight) {
+    public void createPriceByWeight(PriceByWeight priceByWeight) {
         initializeCacheIfClear();
 
         PriceByWeightDto priceByWeightDto = PriceByWeightMapper
                 .toDto(mPriceByWeightRepository.save(priceByWeight));
         mCache.put(priceByWeight.getId(), PriceByWeightMapper.toDto(priceByWeight));
-        return priceByWeightDto;
     }
 
     @Override

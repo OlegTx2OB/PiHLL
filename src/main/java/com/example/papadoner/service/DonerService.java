@@ -8,7 +8,7 @@ import java.util.Set;
 
 public interface DonerService {
 
-    DonerDto createDoner(Doner doner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
+    void createDoner(Doner doner, Set<String> ingredientNames, Set<Long> priceByWeightIds);
 
     List<DonerDto> getDonersByName(String name);
 

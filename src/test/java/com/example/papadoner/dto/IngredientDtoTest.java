@@ -3,11 +3,12 @@ package com.example.papadoner.dto;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class IngredientDtoTest {
+class IngredientDtoTest {
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_IngredientDtoTest() {
+    void allArgsConstructor_CorrectConstructorData_IngredientDtoTest() {
         // Setup
         long id = 1;
         String name = "name";
@@ -21,7 +22,7 @@ public class IngredientDtoTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_IngredientDtoTest() {
+    void gettersSetters_CorrectGettersSetters_IngredientDtoTest() {
         // Setup
         IngredientDto ingredientDto = new IngredientDto();
 
@@ -35,5 +36,15 @@ public class IngredientDtoTest {
         // Assert
         assertEquals(id, ingredientDto.getId());
         assertEquals(name, ingredientDto.getName());
+    }
+
+    @Test
+    void noArgsConstructor_DefaultValues_IngredientDtoTest() {
+        // Act
+        IngredientDto ingredientDto = new IngredientDto();
+
+        // Assert
+        assertEquals(0, ingredientDto.getId());
+        assertNull(ingredientDto.getName());
     }
 }

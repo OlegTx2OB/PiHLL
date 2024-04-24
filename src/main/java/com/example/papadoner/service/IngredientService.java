@@ -8,7 +8,7 @@ import java.util.Set;
 
 public interface IngredientService {
 
-    IngredientDto createIngredient(Ingredient ingredient, Set<String> donerNames);
+    void createIngredient(Ingredient ingredient, Set<String> donerNames);
 
     IngredientDto getIngredientByName(String name);
 

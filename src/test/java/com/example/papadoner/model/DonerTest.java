@@ -10,7 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import org.junit.jupiter.api.Test;
 
-public class DonerTest {
+class DonerTest {
 
     @Test
     void idField_correctGenerationTypeStrategy_DonerTest() throws NoSuchFieldException {
@@ -21,7 +21,7 @@ public class DonerTest {
     }
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_DonerTest() {
+    void allArgsConstructor_CorrectConstructorData_DonerTest() {
         // Setup
         long id = 1;
         String name = "Test Doner";
@@ -39,7 +39,7 @@ public class DonerTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_DonerTest() {
+    void gettersSetters_CorrectGettersSetters_DonerTest() {
         // Setup
         Doner doner = new Doner();
 

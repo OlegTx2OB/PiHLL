@@ -5,11 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class DonerDtoTest {
+class DonerDtoTest {
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_DonerDtoTest() {
+    void allArgsConstructor_CorrectConstructorData_DonerDtoTest() {
         //Setup
         long id = 1;
         String name = "name";
@@ -27,7 +28,7 @@ public class DonerDtoTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_DonerDtoTest() {
+    void gettersSetters_CorrectGettersSetters_DonerDtoTest() {
         //Setup
         DonerDto donerDto = new DonerDto();
 
@@ -47,5 +48,17 @@ public class DonerDtoTest {
         assertEquals(name, donerDto.getName());
         assertEquals(ingredientDtos, donerDto.getIngredientDtos());
         assertEquals(priceByWeightDtos, donerDto.getPriceByWeightDtos());
+    }
+
+    @Test
+    void noArgsConstructor_DefaultValues_DonerDtoTest() {
+        // Act
+        DonerDto donerDto = new DonerDto();
+
+        // Assert
+        assertEquals(0, donerDto.getId());
+        assertNull(donerDto.getName());
+        assertEquals(List.of(), donerDto.getIngredientDtos());
+        assertEquals(List.of(), donerDto.getPriceByWeightDtos());
     }
 }

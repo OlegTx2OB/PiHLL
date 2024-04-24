@@ -7,7 +7,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EntityCacheTest {
+class EntityCacheTest {
 
     private EntityCache<String, Object> cache;
 

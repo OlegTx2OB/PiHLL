@@ -3,6 +3,7 @@ package com.example.papadoner.controller;
 import com.example.papadoner.dto.OrderDto;
 import com.example.papadoner.model.Order;
 import com.example.papadoner.service.OrderService;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Getter
 @RestController
 @RequestMapping("/order")
 public class OrderController {

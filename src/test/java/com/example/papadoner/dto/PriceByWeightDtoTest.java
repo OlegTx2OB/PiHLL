@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class PriceByWeightDtoTest {
+class PriceByWeightDtoTest {
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_PriceByWeightDtoTest() {
+    void allArgsConstructor_CorrectConstructorData_PriceByWeightDtoTest() {
         // Setup
         long id = 1;
         int weight = 500;
@@ -23,7 +23,7 @@ public class PriceByWeightDtoTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_PriceByWeightDtoTest() {
+    void gettersSetters_CorrectGettersSetters_PriceByWeightDtoTest() {
         // Setup
         PriceByWeightDto priceByWeightDto = new PriceByWeightDto();
 
@@ -40,5 +40,16 @@ public class PriceByWeightDtoTest {
         assertEquals(id, priceByWeightDto.getId());
         assertEquals(weight, priceByWeightDto.getWeight());
         assertEquals(price, priceByWeightDto.getPrice());
+    }
+
+    @Test
+    void noArgsConstructor_DefaultValues_PriceByWeightDtoTest() {
+        // Act
+        PriceByWeightDto priceByWeightDto = new PriceByWeightDto();
+
+        // Assert
+        assertEquals(0, priceByWeightDto.getId());
+        assertEquals(0, priceByWeightDto.getWeight());
+        assertEquals(0.0, priceByWeightDto.getPrice());
     }
 }

@@ -7,10 +7,10 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class UserDtoTest {
+class UserDtoTest {
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_UserDtoTest() {
+    void allArgsConstructor_CorrectConstructorData_UserDtoTest() {
         // Setup
         long id = 1;
         long telephone = 1234567890;
@@ -26,7 +26,7 @@ public class UserDtoTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_UserDtoTest() {
+    void gettersSetters_CorrectGettersSetters_UserDtoTest() {
         // Setup
         UserDto userDto = new UserDto();
 
@@ -43,5 +43,16 @@ public class UserDtoTest {
         assertEquals(id, userDto.getId());
         assertEquals(telephone, userDto.getTelephone());
         assertEquals(orderDtos, userDto.getOrderDtos());
+    }
+
+    @Test
+    void noArgsConstructor_DefaultValues_UserDtoTest() {
+        // Act
+        UserDto userDto = new UserDto();
+
+        // Assert
+        assertEquals(0, userDto.getId());
+        assertEquals(0, userDto.getTelephone());
+        assertEquals(List.of(), userDto.getOrderDtos());
     }
 }

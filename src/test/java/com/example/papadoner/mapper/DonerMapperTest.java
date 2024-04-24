@@ -12,10 +12,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DonerMapperTest {
+class DonerMapperTest {
 
     @Test
-    public void toDtos_CorrectConvertation_DonerMapperTest() {
+    void toDtos_CorrectConvertation_DonerMapperTest() {
         //Setup
         Doner doner = new Doner();
         doner.setId(1);
@@ -51,7 +51,7 @@ public class DonerMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassNullArg_DonerMapperTest() {
+    void toDtos_GetEmptyListIfPassNullArg_DonerMapperTest() {
         //Act
         List<DonerDto> donerDtos = DonerMapper.toDtos(null);
 
@@ -61,7 +61,7 @@ public class DonerMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassEmptyList_DonerMapperTest() {
+    void toDtos_GetEmptyListIfPassEmptyList_DonerMapperTest() {
         //Act
         List<DonerDto> donerDtos = DonerMapper.toDtos(List.of());
 

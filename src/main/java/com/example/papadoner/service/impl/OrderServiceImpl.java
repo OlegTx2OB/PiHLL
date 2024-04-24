@@ -35,13 +35,13 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public OrderDto createOrder(Order order, @Nullable Long userId, @Nullable List<Long> donerIds) {
+    public void createOrder(Order order, @Nullable Long userId, @Nullable List<Long> donerIds) {
         if (userId != null) {
             order.setUser(mUserRepository.findById(userId)
                     .orElseThrow(() -> new EntityNotFoundException("User with id " + userId + " not found")));
         }
         order = setDoners(order, donerIds);
-        return OrderMapper.toDto(mOrderRepository.save(order));
+        OrderMapper.toDto(mOrderRepository.save(order));
     }
 
     @Override

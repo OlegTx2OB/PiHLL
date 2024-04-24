@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class OrderTest {
+class OrderTest {
 
     @Test
     void idField_correctGenerationTypeStrategy_OrderTest() throws NoSuchFieldException {
@@ -22,7 +22,7 @@ public class OrderTest {
     }
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_OrderTest() {
+    void allArgsConstructor_CorrectConstructorData_OrderTest() {
         // Setup
         long id = 1;
         User user = new User();
@@ -40,7 +40,7 @@ public class OrderTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_OrderTest() {
+    void gettersSetters_CorrectGettersSetters_OrderTest() {
         // Setup
         Order order = new Order();
 

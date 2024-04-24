@@ -21,7 +21,7 @@ public class UserTest {
     }
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_UserTest() {
+    void allArgsConstructor_CorrectConstructorData_UserTest() {
         // Setup
         long id = 1;
         long telephone = 1234567890;
@@ -37,7 +37,7 @@ public class UserTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_UserTest() {
+    void gettersSetters_CorrectGettersSetters_UserTest() {
         // Setup
         User user = new User();
 

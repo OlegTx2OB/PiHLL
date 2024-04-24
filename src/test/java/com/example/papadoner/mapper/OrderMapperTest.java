@@ -12,9 +12,10 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class OrderMapperTest {
+class OrderMapperTest {
+
     @Test
-    public void toDtos_CorrectConvertation_OrderMapperTest() {
+    void toDtos_CorrectConvertation_OrderMapperTest() {
         //Setup
         Order order = new Order();
         order.setId(1);
@@ -41,7 +42,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassNullArg_OrderMapperTest() {
+    void toDtos_GetEmptyListIfPassNullArg_OrderMapperTest() {
         //Act
         List<OrderDto> orderDtos = OrderMapper.toDtos(null);
 
@@ -51,7 +52,7 @@ public class OrderMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassEmptyList_OrderMapperTest() {
+    void toDtos_GetEmptyListIfPassEmptyList_OrderMapperTest() {
         //Act
         List<OrderDto> orderDtos = OrderMapper.toDtos(List.of());
 

@@ -4,6 +4,7 @@ import com.example.papadoner.dto.PriceByWeightDto;
 import com.example.papadoner.model.PriceByWeight;
 import com.example.papadoner.service.PriceByWeightService;
 import com.example.papadoner.service.RequestCounterService;
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Getter
 @Log4j2
 @RestController
 @RequestMapping("/priceByWeight")

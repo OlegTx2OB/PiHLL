@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class PriceByWeightTest {
+class PriceByWeightTest {
 
     @Test
     void idField_correctGenerationTypeStrategy_PriceByWeightTest() throws NoSuchFieldException {
@@ -18,7 +18,7 @@ public class PriceByWeightTest {
     }
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_PriceByWeightTest() {
+    void allArgsConstructor_CorrectConstructorData_PriceByWeightTest() {
         // Setup
         long id = 1;
         int weight = 500;
@@ -34,7 +34,7 @@ public class PriceByWeightTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_PriceByWeightTest() {
+    void gettersSetters_CorrectGettersSetters_PriceByWeightTest() {
         // Setup
         PriceByWeight priceByWeight = new PriceByWeight();
 

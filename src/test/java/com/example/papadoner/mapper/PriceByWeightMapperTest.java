@@ -8,10 +8,10 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class PriceByWeightMapperTest {
+class PriceByWeightMapperTest {
 
     @Test
-    public void toDtos_CorrectConvertation_PriceByWeightMapperTest() {
+    void toDtos_CorrectConvertation_PriceByWeightMapperTest() {
         PriceByWeight entity1 = new PriceByWeight(1, 500, 0.5);
         PriceByWeight entity2 = new PriceByWeight(2, 600, 0.43);
 
@@ -30,7 +30,7 @@ public class PriceByWeightMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassNullArg_PriceByWeightMapperTest() {
+    void toDtos_GetEmptyListIfPassNullArg_PriceByWeightMapperTest() {
         //Act
         List<PriceByWeightDto> priceByWeightDtos = PriceByWeightMapper.toDtos(null);
 
@@ -40,7 +40,7 @@ public class PriceByWeightMapperTest {
     }
 
     @Test
-    public void toDtos_GetEmptyListIfPassEmptyList_PriceByWeightMapperTest() {
+    void toDtos_GetEmptyListIfPassEmptyList_PriceByWeightMapperTest() {
         //Act
         List<PriceByWeightDto> priceByWeightDtos = PriceByWeightMapper.toDtos(List.of());
 

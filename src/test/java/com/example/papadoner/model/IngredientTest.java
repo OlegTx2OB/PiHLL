@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class IngredientTest {
+class IngredientTest {
 
     @Test
     void idField_correctGenerationTypeStrategy_IngredientTest() throws NoSuchFieldException {
@@ -21,7 +21,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void allArgsConstructor_CorrectConstructorData_IngredientTest() {
+    void allArgsConstructor_CorrectConstructorData_IngredientTest() {
         // Setup
         long id = 1;
         String name = "Test Ingredient";
@@ -37,7 +37,7 @@ public class IngredientTest {
     }
 
     @Test
-    public void gettersSetters_CorrectGettersSetters_IngredientTest() {
+    void gettersSetters_CorrectGettersSetters_IngredientTest() {
         // Setup
         Ingredient ingredient = new Ingredient();
 
