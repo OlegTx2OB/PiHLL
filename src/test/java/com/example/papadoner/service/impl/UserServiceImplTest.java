@@ -41,24 +41,6 @@ public class UserServiceImplTest {
         assertEquals(orderRepository, userService.getMOrderRepository());
     }
 
-//    @Test
-//    void createUser_Success() {
-//        // Arrange
-//
-//        Set<Long> orderIds = Set.of(1L, 2L);
-//
-//        when(mOrderRepository.findById(1L)).thenReturn(Optional.of(new Order()));
-//        when(mOrderRepository.findById(2L)).thenReturn(Optional.of(new Order()));
-//        User user = new User();
-//
-//        // Act
-//        mUserService.createUser(user, orderIds);
-//
-//        // Assert
-//        verify(mUserRepository, times(1)).save(user);
-//        assertEquals(orderIds, user.getOrders());
-//    }
-
     @Test
     void getUserById_UserFound_Success() {
         // Arrange
@@ -103,17 +85,6 @@ public class UserServiceImplTest {
         verify(mUserRepository, times(1)).save(newUser);
     }
 
-//    @Test
-//    void updateUser_UserNotFound_ExceptionThrown() {
-//        // Arrange
-//        long nonExistentUserId = 999L;
-//        User newUser = new User(nonExistentUserId, 123, List.of());
-//        Set<Long> orderIds = Set.of(1L, 2L);
-//        when(mUserRepository.findById(nonExistentUserId)).thenReturn(Optional.empty());
-//
-//        // Act & Assert
-//        assertThrows(EntityNotFoundException.class, () -> mUserService.updateUser(nonExistentUserId, newUser, orderIds));
-//    }
 
     @Test
     void deleteUser_Success() {

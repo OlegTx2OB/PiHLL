@@ -146,4 +146,31 @@ public class IngredientServiceImplTest {
         // Assert
         assertEquals(ingredientList.size(), result.size());
     }
+
+    @Test
+    void getDoners_ReturnEmptyArrayListIfArgIsNullTest() {
+        Set<String> donerNames = null;
+        List<Doner> result = mIngredientService.getDoners(donerNames);
+
+        assertEquals(new ArrayList<Doner>(), result);
+    }
+
+    @Test
+    void getDoners_ReturnArrayListTest() {
+        // Setup
+        Set<String> donerNames = Set.of("doner1", "doner2");
+        List<Doner> doners1 = List.of(new Doner());
+        List<Doner> doners2 = List.of(new Doner());
+
+        // Stubbing the method call for both names
+        when(mDonerRepository.findDonersByName("doner1")).thenReturn(doners1);
+        when(mDonerRepository.findDonersByName("doner2")).thenReturn(doners2);
+
+        // Act
+        List<Doner> result = mIngredientService.getDoners(donerNames);
+
+        // Assert
+        assertEquals(2, result.size());
+    }
+
 }

@@ -87,7 +87,7 @@ public class IngredientServiceImpl implements IngredientService {
         return IngredientMapper.toDtos(mIngredientRepository.findAll());
     }
 
-    private List<Doner> getDoners(Set<String> donerNames) {
+    List<Doner> getDoners(Set<String> donerNames) {
         if (donerNames != null) {
             List<Doner> doners = new ArrayList<>();
             for (String name : donerNames) {

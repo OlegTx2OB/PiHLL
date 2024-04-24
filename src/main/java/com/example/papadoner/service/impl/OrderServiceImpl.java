@@ -76,7 +76,7 @@ public class OrderServiceImpl implements OrderService {
         return OrderMapper.toDtos(mOrderRepository.findAll());
     }
 
-    private Order setDoners(Order order, List<Long> donerIds) {
+    Order setDoners(Order order, List<Long> donerIds) {
         if (donerIds != null) {
             List<Doner> doners = new ArrayList<>();
             for (long id : donerIds) {

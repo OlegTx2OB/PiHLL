@@ -13,6 +13,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,18 +41,19 @@ public class PriceByWeightServiceImplTest {
         assertEquals(cache, priceByWeightService.getMCache());
     }
 
-//    @Test
-//    void createPriceByWeight_Success() {
-//        // Arrange
-//        PriceByWeight priceByWeight = new PriceByWeight(1L, 250, 10.0);
-//
-//        // Act
-//        mPriceByWeightService.createPriceByWeight(priceByWeight);
-//
-//        // Assert
-//        verify(mPriceByWeightRepository, times(1)).save(priceByWeight);
-//        verify(mCache, times(1)).put(eq(priceByWeight.getId()), any(PriceByWeightDto.class));
-//    }
+    @Test
+    void createPriceByWeight_Success() {
+        // Arrange
+        PriceByWeight priceByWeight = new PriceByWeight(1L, 250, 10.0);
+        when(mPriceByWeightRepository.save(any())).thenReturn(priceByWeight);
+
+        // Act
+        mPriceByWeightService.createPriceByWeight(priceByWeight);
+
+        // Assert
+        verify(mPriceByWeightRepository, times(1)).save(priceByWeight);
+        verify(mCache, times(1)).put(eq(priceByWeight.getId()), any(PriceByWeightDto.class));
+    }
 
     @Test
     void getPriceByWeightById_PriceByWeightFound_Success() {
@@ -77,25 +79,6 @@ public class PriceByWeightServiceImplTest {
         // Act & Assert
         assertThrows(EntityNotFoundException.class, () -> mPriceByWeightService.getPriceByWeightById(nonExistentId));
     }
-
-//    @Test
-//    void updatePriceByWeight_Success() {
-//        // Arrange
-//        long id = 1L;
-//        PriceByWeight oldPriceByWeight = new PriceByWeight(id, 250, 10.0);
-//        PriceByWeight newPriceByWeight = new PriceByWeight(id, 300, 12.0);
-//        when(mPriceByWeightRepository.findById(id)).thenReturn(Optional.of(oldPriceByWeight));
-//
-//        // Act
-//        PriceByWeightDto result = mPriceByWeightService.updatePriceByWeight(id, newPriceByWeight);
-//
-//        // Assert
-//        assertNotNull(result);
-//        assertEquals(newPriceByWeight.getWeight(), result.getWeight());
-//        assertEquals(newPriceByWeight.getPrice(), result.getPrice());
-//        verify(mPriceByWeightRepository, times(1)).save(newPriceByWeight);
-//        verify(mCache, times(1)).put(eq(id), any(PriceByWeightDto.class));
-//    }
 
     @Test
     void updatePriceByWeight_PriceByWeightNotFound_ExceptionThrown() {
@@ -141,15 +124,24 @@ public class PriceByWeightServiceImplTest {
         assertThrows(InvalidEnteredDataException.class, () -> mPriceByWeightService.createPriceByWeightBulk(null));
     }
 
-//    @Test
-//    void createPriceByWeightBulk_ListWithItems_Success() {
-//        // Arrange
-//        List<PriceByWeight> priceByWeights = List.of(new PriceByWeight(), new PriceByWeight());
-//
-//        // Act
-//        mPriceByWeightService.createPriceByWeightBulk(priceByWeights);
-//
-//        // Assert
-//        verify(mPriceByWeightRepository, times(priceByWeights.size())).save(any(PriceByWeight.class));
-//    }
+    @Test
+    void createPriceByWeightBulk_WithValidList_Success() {
+        // Setup
+        List<PriceByWeight> priceByWeights = new ArrayList<>();
+        priceByWeights.add(new PriceByWeight());
+        priceByWeights.add(new PriceByWeight());
+
+        when(mPriceByWeightRepository.save(any(PriceByWeight.class)))
+                .thenAnswer(invocation -> {
+                    PriceByWeight argument = invocation.getArgument(0);
+                    argument.setId(1L);
+                    return argument;
+                });
+
+        // Act
+        mPriceByWeightService.createPriceByWeightBulk(priceByWeights);
+
+        // Assert
+        verify(mPriceByWeightRepository, times(2)).save(any(PriceByWeight.class));
+    }
 }
