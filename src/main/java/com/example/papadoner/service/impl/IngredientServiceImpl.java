@@ -9,6 +9,7 @@ import com.example.papadoner.repository.IngredientRepository;
 import com.example.papadoner.service.IngredientService;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
+@Getter
 @Log4j2
 @Service
 public class IngredientServiceImpl implements IngredientService {

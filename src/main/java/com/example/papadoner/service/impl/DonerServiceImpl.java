@@ -11,6 +11,7 @@ import com.example.papadoner.repository.PriceByWeightRepository;
 import com.example.papadoner.service.DonerService;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+@Getter
 @Log4j2
 @Service
 public class DonerServiceImpl implements DonerService {
@@ -102,7 +104,7 @@ public class DonerServiceImpl implements DonerService {
         return DonerMapper.toDtos(mDonerRepository.findAll());
     }
 
-    private List<Ingredient> getIngredients(Set<String> ingredientNames) {
+    List<Ingredient> getIngredients(Set<String> ingredientNames) {
         if (ingredientNames != null) {
             List<Ingredient> ingredients = new ArrayList<>();
             for (String name : ingredientNames) {
@@ -116,7 +118,7 @@ public class DonerServiceImpl implements DonerService {
         return new ArrayList<>();
     }
 
-    private List<PriceByWeight> getPriceByWeights(Set<Long> priceByWeightIds) {
+    List<PriceByWeight> getPriceByWeights(Set<Long> priceByWeightIds) {
         if (priceByWeightIds != null) {
             List<PriceByWeight> priceByWeights = new ArrayList<>();
             for (long id : priceByWeightIds) {
@@ -130,7 +132,7 @@ public class DonerServiceImpl implements DonerService {
         return new ArrayList<>();
     }
 
-    private void saveDonerInIngredients(Doner doner, List<Ingredient> ingredients) {
+    void saveDonerInIngredients(Doner doner, List<Ingredient> ingredients) {
         for (Ingredient ingredient : ingredients) {
             ingredient.getDoners().add(doner);
             mIngredientRepository.save(ingredient);

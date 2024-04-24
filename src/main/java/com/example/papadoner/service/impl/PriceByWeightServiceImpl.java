@@ -8,12 +8,14 @@ import com.example.papadoner.model.PriceByWeight;
 import com.example.papadoner.repository.PriceByWeightRepository;
 import com.example.papadoner.service.PriceByWeightService;
 import jakarta.persistence.EntityNotFoundException;
+import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Getter
 @Log4j2
 @Service
 public class PriceByWeightServiceImpl implements PriceByWeightService {
