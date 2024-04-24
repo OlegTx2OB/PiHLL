@@ -37,7 +37,7 @@ public class IngredientServiceImpl implements IngredientService {
     public void createIngredient(Ingredient ingredient, @Nullable Set<String> donerNames) {
         List<Doner> doners = getDoners(donerNames);
         ingredient.getDoners().addAll(doners);
-        IngredientDto ingredientDto = IngredientMapper.toDto(mIngredientRepository.save(ingredient));
+        mIngredientRepository.save(ingredient);
         saveIngredientInDoners(ingredient, doners);
     }
 

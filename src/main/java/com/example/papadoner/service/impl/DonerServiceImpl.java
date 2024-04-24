@@ -49,8 +49,7 @@ public class DonerServiceImpl implements DonerService {
         List<PriceByWeight> priceByWeights = getPriceByWeights(priceByWeightIds);
         doner.getIngredients().addAll(ingredients);
         doner.getPricesByWeight().addAll(priceByWeights);
-        DonerDto donerDto = DonerMapper.toDto(mDonerRepository.save(doner));
-
+        mDonerRepository.save(doner);
         saveDonerInIngredients(doner, ingredients);
     }
 

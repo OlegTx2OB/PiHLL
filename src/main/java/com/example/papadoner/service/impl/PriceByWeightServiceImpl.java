@@ -34,9 +34,7 @@ public class PriceByWeightServiceImpl implements PriceByWeightService {
     @Override
     public void createPriceByWeight(PriceByWeight priceByWeight) {
         initializeCacheIfClear();
-
-        PriceByWeightDto priceByWeightDto = PriceByWeightMapper
-                .toDto(mPriceByWeightRepository.save(priceByWeight));
+        mPriceByWeightRepository.save(priceByWeight);
         mCache.put(priceByWeight.getId(), PriceByWeightMapper.toDto(priceByWeight));
     }
 

@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class DonerServiceImplTest {
+class DonerServiceImplTest {
 
     @Mock
     private IngredientRepository mIngredientRepository;

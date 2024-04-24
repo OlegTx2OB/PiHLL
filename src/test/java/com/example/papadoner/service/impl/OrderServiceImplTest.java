@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class OrderServiceImplTest {
+class OrderServiceImplTest {
 
     @Mock
     private OrderRepository mOrderRepository;
@@ -33,6 +33,19 @@ public class OrderServiceImplTest {
     @InjectMocks
     private OrderServiceImpl mOrderService;
 
+    @Test
+    void createOrder_WithInvalidUserId_ShouldThrowEntityNotFoundExceptionTest() {
+        // Setup
+        Long userId = 1L;
+        List<Long> donerIds = List.of(1L, 2L);
+
+        when(mUserRepository.findById(userId)).thenReturn(Optional.empty());
+
+        // Act & Assert
+        assertThrows(EntityNotFoundException.class, () -> {
+            mOrderService.createOrder(new Order(), userId, donerIds);
+        });
+    }
 
     @Test
     void correctConstructorTest() {

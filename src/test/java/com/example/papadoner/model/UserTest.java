@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class UserTest {
+class UserTest {
 
     @Test
     void idField_correctGenerationTypeStrategy_UserTest() throws NoSuchFieldException {

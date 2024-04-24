@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void createUser(User user, @Nullable Set<Long> orderIds) {
         user = setOrders(user, orderIds);
-        UserMapper.toDto(mUserRepository.save(user));
+        mUserRepository.save(user);
     }
 
     @Override
@@ -75,7 +75,7 @@ public class UserServiceImpl implements UserService {
         return UserMapper.toDtos(mUserRepository.findUsersWithMoreOrdersThan(count));
     }
 
-    private User setOrders(User user, Set<Long> orderIds) {
+    User setOrders(User user, Set<Long> orderIds) {
         if (orderIds != null) {
             List<Order> orders = new ArrayList<>();
             for (long id : orderIds) {

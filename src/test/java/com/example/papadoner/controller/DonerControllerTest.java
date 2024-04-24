@@ -44,7 +44,7 @@ class DonerControllerTest {
     }
 
     @Test
-    public void getDonersByNameTest() {
+    void getDonersByNameTest() {
         //Setup
         String donerName = "SomeDoner";
         List<DonerDto> expectedDoners = List.of(new DonerDto(1L, "SomeDoner", List.of(), null));

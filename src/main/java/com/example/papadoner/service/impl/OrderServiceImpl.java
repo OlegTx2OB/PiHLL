@@ -43,7 +43,7 @@ public class OrderServiceImpl implements OrderService {
                     .orElseThrow(() -> new EntityNotFoundException("User with id " + userId + " not found")));
         }
         order = setDoners(order, donerIds);
-        OrderMapper.toDto(mOrderRepository.save(order));
+        mOrderRepository.save(order);
     }
 
     @Override
